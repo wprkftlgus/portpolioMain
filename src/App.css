@@ -1,0 +1,66 @@
+.Title {
+  font-size: 50px;
+  text-align: center;
+  cursor: url(C:\Users\Nekur\my-app\public\cursor.png) 160 160, auto  ;
+}
+.App {
+  min-height: 1000px;
+  padding: 30px;
+  background-color: #070707;
+  color:  white;
+  background: radial-gradient(
+    circle,
+    rgba(77, 24, 77, 0.6) 10%,
+    rgba(0, 0, 0, 1) 60%
+  );
+}
+.Neon {
+  background: white;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  opacity: 0.05;
+  border-radius: 200px;
+}
+.Section1 {
+  height: 620px;
+}
+.Logo {
+  width: 80px;
+}
+.Top-box {
+  display: flex;
+  justify-content: left;
+  gap: 200px;
+  
+}
+.Top-tag {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: inline-block;
+  
+}
+.Body-title1 {
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 50px;
+}
+.About {
+  background-color: rgb(123, 188, 188);
+  color: #070707;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
+.Project {
+  
+  margin-top: 150px;
+  background-color:rgb(83, 80, 77);
+  height: 700px;
+}
+.Body-title2 {
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 50px;
+}
