@@ -4,16 +4,16 @@
   cursor: url(C:\Users\Nekur\my-app\public\cursor.png) 160 160, auto  ;
 }
 .App {
-  min-height: 1000px;
+  
   padding: 30px;
   background-color: #070707;
   color:  white;
-  background: radial-gradient(
-    circle,
-    rgba(77, 24, 77, 0.6) 10%,
-    rgba(0, 0, 0, 1) 60%
-  );
+  background-image: url(C:\Users\Nekur\my-app\public\space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 .Neon {
   background: white;
   width: 200px;
