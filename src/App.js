@@ -1,12 +1,14 @@
-import React, { useRef ,useState, useEffect, use } from 'react';
+import React, { useRef ,useState, useEffect, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import './App.css';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { motion  } from 'framer-motion';
 import * as THREE from 'three';
+import { div } from 'framer-motion/client';
+import { Html } from '@react-three/drei';
 
-function Scene({focus}) {
+function Scene({focus, onLoad}) {
   const { camera } = useThree();
 
   const groupRef = useRef();
@@ -21,9 +23,14 @@ function Scene({focus}) {
   const mars = useGLTF("/mars.glb");
   const sun = useGLTF("hot_sun.glb")
 
-  
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    if( earth.scene && mars.scene && sun.scene){
+      onLoad();
+    }
+  },[earth, mars, sun, onLoad])
+
+  useEffect(() => {
+    const handleMouseMove = (e)  => {
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = -(e.clientY / window.innerHeight) * 2 + 1;
       setMouse({ x, y });
@@ -79,7 +86,7 @@ function Scene({focus}) {
 return(
   <group ref={groupRef}>
     <Orbit speed={0.3} radius={3.5}>
-    <primitive ref={marsRef} object={mars.scene} scale={3} position={[12, 0, 1]} />
+    <primitive ref={marsRef} object={mars.scene} scale={3} position={[14, 0, 1]} />
     </Orbit>
     <Orbit speed={0.2} radius={10}>
     <primitive ref={earthRef} object={earth.scene} scale={1.5}  />
@@ -141,13 +148,69 @@ function App() {
   },[]);
   const [focus, setFocus] = useState(null);
 
+  const [isLoaded, setIsLoaded] = useState(false);
+   const onSceneLoaded = () => {
+    setIsLoaded(true);
+  };
   return (
     <div className='App'>
      <div className='Neon' style={{left: position.x, top: position.y}}></div>
      <div className='Section1'>  
       <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
+      {focus === 'earth' && (
+        <div className='about-sentence-group'>
+        <motion.div className='about-title' initial={{opacity: 0}}
+        animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
+          Hello there👋, <br />This is Sihyeon! 
+        </motion.div>
+          <motion.div className='about-sentence' initial={{opacity: 0}}
+        animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
+           <br /> I’m now determined to grow as a Full-Stack developer.  
+I love building engaging and interactive web applications, and 
+I'm eager to bring fresh ideas and technical skills to every project I take on.
+          <ul>
+           <li>🚢 graduated of Naval Engineering, at University of Ulsan</li>
+           <li>💪 18 months completed military service</li>
+           <li>🏡 Airbnb business for 6 months with wife</li>
+          </ul>
+        </motion.div>
+        </div>
+      )}
+      {focus === 'earth' && (
+        <div className='skills-group'>
+        <motion.div initial={{opacity: 0}}
+         animate={{opacity:1}} transition={{duration: 1.4}}>
+          <div className='skills-title'>Skills</div>
+          <ul className='skills-ul'>
+            <li className='skills-units'><img width={50} src='\react.png' /></li>
+            <li className='skills-units'><img width={50} src='\html.png'/></li>
+            <li className='skills-units'><img width={50} src='\css.png'/></li>
+            <li className='skills-units'><img width={50} src='\js.png'/></li>
+            <li className='skills-units'><img width={50} src='\nodejs.png'/></li>
+            <li className='skills-units'><img width={50} src='\github1.png'/></li>
+            <li className='skills-units'><img width={50} src='\vs.png'/></li>
+            <li className='skills-units'><img width={50} src='\mongo.png'/></li>
+            <li className='skills-units'><img width={50} /></li>
+          </ul>
+        </motion.div>
+        </div>
+      )}
+      {focus === 'mars' && (
+        <motion.div className='project-sentence' initial={{opacity: 0}}
+        animate={{opacity:1}} transition={{duration: 1.4}}>
+
+        </motion.div>
+      )}
+      {focus === 'moon' && (
+        <motion.div className='contact-sentence' initial={{opacity: 0}}
+        animate={{opacity:1}} transition={{duration: 1.4}}>
+
+        </motion.div>
+      )}
       <div className='Top-tag-group'>
-      <motion.div className='Top-tag0' initial={{ opacity:0, x: 0, y: 500}}
+      {isLoaded && (
+        <>
+        <motion.div className='Top-tag0' initial={{ opacity:0, x: 0, y: 500}}
       animate={{ opacity: 1, x: 0, y: 0}}
       transition={{duration: 1.4, delay: 0.4}} onClick={() => setFocus('zoomout') }>
       Zoom Out
@@ -163,10 +226,22 @@ function App() {
       <motion.div className='Top-tag3' initial={{ opacity:0, x: 0, y: 500}}
       animate={{ opacity: 1, x: 0, y: 0}}
       transition={{duration: 1.8, delay: 0.6}} onClick={() => setFocus('moon') }
-      >Contact</motion.div>
+      >Contact</motion.div></>)
+      };
       </div>
+      
+
       <Canvas className='canvas' camera={{ position: [0, 0, 18] }} >
-        <Scene focus = {focus}/>
+        <Suspense fallback={
+          <Html>
+            <div className='background'>
+              <div className='Loading-bar'>Loding...</div>
+            </div>
+            
+          </Html>
+        }>
+         <Scene focus = {focus} onLoad={onSceneLoaded}/>
+        </Suspense>
         <pointLight position={[0, 0, 0]} intensity={400} color="#edebe1ff" />
         <EffectComposer>
          <Bloom luminanceThreshold={100} 
@@ -175,6 +250,7 @@ function App() {
         <directionalLight position={[-2, 2, 2]} intensity={1} />
         <ambientLight position={[2, 2, 2]} intensity={1} />
       </Canvas>
+      
       </div>
   </div>
   );
