@@ -182,15 +182,15 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
          animate={{opacity:1}} transition={{duration: 1.4}}>
           <div className='skills-title'>Skills</div>
           <ul className='skills-ul'>
-            <li className='skills-units'><img width={50} src='\react.png' /></li>
-            <li className='skills-units'><img width={50} src='\html.png'/></li>
-            <li className='skills-units'><img width={50} src='\css.png'/></li>
-            <li className='skills-units'><img width={50} src='\js.png'/></li>
-            <li className='skills-units'><img width={50} src='\nodejs.png'/></li>
-            <li className='skills-units'><img width={50} src='\github1.png'/></li>
-            <li className='skills-units'><img width={50} src='\vs.png'/></li>
-            <li className='skills-units'><img width={50} src='\mongo.png'/></li>
-            <li className='skills-units'><img width={50} /></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\react.png' /></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\html.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\css.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\js.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\nodejs.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\github1.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\vs.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} src='\mongo.png'/></li>
+            <li className='skills-units'><img className='skills-img' width={50} /></li>
           </ul>
         </motion.div>
         </div>
@@ -229,7 +229,10 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       >Contact</motion.div></>)
       };
       </div>
-      
+      <div className='buttom'>
+        <a href='https://github.com/wprkftlgus' target='_blank'>
+        <img className='buttom-img-github' width={50} src='github2.png' /></a>
+      </div>
 
       <Canvas className='canvas' camera={{ position: [0, 0, 18] }} >
         <Suspense fallback={
@@ -240,7 +243,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
             
           </Html>
         }>
-         <Scene focus = {focus} onLoad={onSceneLoaded}/>
+         <Scene className="scene" focus = {focus} onLoad={onSceneLoaded}/>
         </Suspense>
         <pointLight position={[0, 0, 0]} intensity={400} color="#edebe1ff" />
         <EffectComposer>

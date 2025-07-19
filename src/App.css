@@ -39,13 +39,93 @@
   top: 10%;
   left: 13%;
   max-width: 400px;
-  width: 100%;
+  width: 30%;
   font-size: 20px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 20px;
   backdrop-filter: blur(6px);
   z-index: 10;
+}
+@media (max-width: 905px) {
+  .about-title {
+    font-size: 20px;
+  }
+  .about-sentence {
+    font-size: 15px;
+  }
+  .Top-tag-group {
+    font-size: 2px;
+  }
+  .Top-tag0 {
+    font-size: 25px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 45px !important;
+  }
+  .skills-title {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 680px) {
+   .about-title {
+    font-size: 15px!important;
+  }
+  .about-sentence {
+    font-size: 10px;
+  }
+  .Top-tag-group {
+    font-size: 2px;
+  }
+  .Top-tag0 {
+    font-size: 20px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 30px !important;
+  }
+  .buttom-img-github {
+    width: 35px;
+  }
+  .skills-img {
+    width: 30px;
+  }
+  .Logo {
+    width: 50px;
+  }
+  .skills-group {
+    left: 55% !important;
+  }
+}
+@media(max-width: 440px){
+  .Top-tag0 {
+    font-size: 10px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 20px !important;
+  }
+  .skills-group {
+    left: 57% !important;
+  }
+  .about-title {
+    font-size: 12px !important;
+  }
+  .about-sentence {
+    font-size: 7px;
+  }
+  .canvas {
+    width: 10%;
+  }
+  .skills-title {
+  font-size: 15px !important;
+}
+}
+@media (max-width: 340px) {
+   .Top-tag0 {
+    font-size: 7px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 17px !important;
+  }
 }
 .about-title {
   font-size: 30px;
@@ -55,14 +135,15 @@
   padding-top: 15px;
 }
 .skills-group {
-  max-width: 200px;
+  width: 10%;
   background: rgba(101, 101, 101, 0.5);
   position: absolute;
-  display: flex;
   top: 10%;
   left: 50%;
   border-radius: 18px;
   z-index: 10;
+  text-align: center;
+  padding: 5px;
 }
 .skills-title {
   font-size: 30px;
@@ -70,6 +151,7 @@
 }
 .skills-ul {
   list-style: none;
+  padding-left: 0;
 }
 .skills-units:hover {
   
@@ -108,6 +190,13 @@
 }
 .Top-tag0:hover, .Top-tag1:hover, .Top-tag2:hover, .Top-tag3:hover {
   color: rebeccapurple;
+}
+.buttom {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  cursor: pointer;
+  z-index: 2;
 }
 .Body-title1 {
   font-size: 40px;
