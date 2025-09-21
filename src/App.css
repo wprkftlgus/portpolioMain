@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 .Title {
   font-size: 50px;
   text-align: center;
-  cursor: url(C:\Users\Nekur\my-app\public\cursor.png) 160 160, auto  ;
+  cursor: url() 160 160, auto  ;
 }
 .App {
   
   background-color: #070707;
   color:  white;
-  background-image: url(C:\Users\Nekur\my-app\public\space.jpg);
+  background-image: url(C:\Users\-.-\Desktop\portpolioMain\public\space.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -26,6 +27,10 @@
 }
 .Logo {
   width: 80px;
+  transition: 0.4s;
+}
+.Logo:hover {
+  transform: rotate(720deg);
 }
 .div-logo {
   display: inline-block;
@@ -44,88 +49,8 @@
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 20px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   z-index: 10;
-}
-@media (max-width: 905px) {
-  .about-title {
-    font-size: 20px;
-  }
-  .about-sentence {
-    font-size: 15px;
-  }
-  .Top-tag-group {
-    font-size: 2px;
-  }
-  .Top-tag0 {
-    font-size: 25px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 45px !important;
-  }
-  .skills-title {
-    font-size: 18px !important;
-  }
-}
-@media (max-width: 680px) {
-   .about-title {
-    font-size: 15px!important;
-  }
-  .about-sentence {
-    font-size: 10px;
-  }
-  .Top-tag-group {
-    font-size: 2px;
-  }
-  .Top-tag0 {
-    font-size: 20px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 30px !important;
-  }
-  .buttom-img-github {
-    width: 35px;
-  }
-  .skills-img {
-    width: 30px;
-  }
-  .Logo {
-    width: 50px;
-  }
-  .skills-group {
-    left: 55% !important;
-  }
-}
-@media(max-width: 440px){
-  .Top-tag0 {
-    font-size: 10px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 20px !important;
-  }
-  .skills-group {
-    left: 57% !important;
-  }
-  .about-title {
-    font-size: 12px !important;
-  }
-  .about-sentence {
-    font-size: 7px;
-  }
-  .canvas {
-    width: 10%;
-  }
-  .skills-title {
-  font-size: 15px !important;
-}
-}
-@media (max-width: 340px) {
-   .Top-tag0 {
-    font-size: 7px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 17px !important;
-  }
 }
 .about-title {
   font-size: 30px;
@@ -156,47 +81,128 @@
 .skills-units:hover {
   
 }
+.holder-contact {
+  top: 15%;
+  left: 25%;
+  width: 45%;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 50px;
+  padding: 25px;
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  position: absolute;
+}
+.name-contact {
+  font-size: 55px;
+  padding: 10px;
+}
+.email {
+  width: 19vw;
+  outline: none;
+  border-style: none;
+  padding: 13px;
+  border-radius: 25px;
+  font-size: 30px;
+  background: rgba(63, 63, 63, 0.5);
+  color: white;
+  margin: 5px;
+}
+.title {
+  width: 19vw;
+  outline: none;
+  border-style: none;
+  padding: 13px;
+  border-radius: 25px;
+  font-size: 30px;
+  background: rgba(63, 63, 63, 0.5);
+  color: white;
+  margin: 5px;
+}
+.content {
+  height: 40vh;
+  width: 40vw;
+  outline: none;
+  border-style: none;
+  padding: 13px;
+  border-radius: 25px;
+  font-size: 30px;
+  background: rgba(63, 63, 63, 0.5);
+  color: white;
+  margin: 5px;
+  resize: none;
+}
 .Top-tag-group{
+  font-family: "Bungee Inline", sans-serif;
   text-align: right;
   display: inline-block;
   flex-direction: column;
   position: absolute;
   z-index: 1;
-  right: 8%;
+  right: 5%;
   top: 10%;
 }
 .Top-tag0{
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bolder;
   cursor: pointer;
   display: inline-block;
+  padding-bottom: 3px;
 }
 .Top-tag1{
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bolder;
   cursor: pointer;
-  
+  padding-bottom: 3px;
 }
 .Top-tag2{
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bolder;
   cursor: pointer;
-  
+  padding-bottom: 3px;
 }
 .Top-tag3{
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bolder;
   cursor: pointer;
 }
 .Top-tag0:hover, .Top-tag1:hover, .Top-tag2:hover, .Top-tag3:hover {
   color: rebeccapurple;
 }
-.buttom {
+.holder-bottom {
+  text-align: center;
+}
+.bottom {
+  background-color: rgb(70, 70, 70);
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 50px;
   position: absolute;
-  top: 90%;
-  left: 90%;
-  cursor: pointer;
+  top: 90vh;
+  left: 40vw;
   z-index: 2;
+  width: 100px;
+  animation: bottomWide 2s ease forwards;
+}
+.popup-nameAndImg-github {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.popup-name {
+  display: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 60px;
+}
+.popup-nameAndImg-github:hover .popup-name {
+  display: inline-block;
 }
 .Body-title1 {
   font-size: 40px;
@@ -241,4 +247,184 @@
   font-size: 100px;
   text-align: center;
   align-items: center;
+}
+
+@keyframes bottomWide {
+  0% {
+    transform: scaleY(20px);
+    width: 50px;
+    left: calc(50% - 50px); 
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(0px);
+    width: 500px;
+    left: calc(50% - 250px);  
+    opacity: 0.65;
+  }
+}
+@media (max-width: 1440px) {
+  .name-contact {
+    font-size: 45px;
+  }
+  .holder-contact {
+    top: 8%;
+    left: 20%;
+  }
+  .email {
+    width: 20vw;
+  }
+  .title {
+    width: 20vw;
+  }
+  .content {
+    height: 35vh;
+  }
+}
+@media (max-width: 1130px) {
+  .name-contact {
+    font-size: 35px;
+  }
+  .holder-contact {
+    top: 8%;
+    left: 10%;
+  }
+  .email {
+    width: 20vw;
+    font-size: 20px;
+  }
+  .title {
+    width: 20vw;
+    font-size: 20px;
+  }
+  .content {
+    height: 35vh;
+    font-size: 20px;
+  }
+}
+@media (max-width: 905px) {
+  .about-title {
+    font-size: 20px;
+  }
+  .about-sentence {
+    font-size: 15px;
+  }
+  .Top-tag-group {
+    font-size: 2px;
+  }
+  .Top-tag0 {
+    font-size: 25px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 40px !important;
+  }
+  .skills-title {
+    font-size: 18px !important;
+  }
+
+
+  .name-contact {
+    font-size: 30px;
+  }
+  .holder-contact {
+    top: 8%;
+    left: 10%;
+  }
+  .email {
+    width: 20vw;
+    font-size: 20px;
+    margin: 2px;
+  }
+  .title {
+    width: 20vw;
+    font-size: 20px;
+    margin: 2px;
+  }
+  .content {
+    height: 35vh;
+    font-size: 20px;
+    margin: 2px;
+  }
+}
+@media (max-width: 680px) {
+   .about-title {
+    font-size: 15px!important;
+  }
+  .about-sentence {
+    font-size: 10px;
+  }
+  .Top-tag-group {
+    font-size: 2px;
+  }
+  .Top-tag0 {
+    font-size: 20px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 30px !important;
+  }
+  .bottom-img-github {
+    width: 35px;
+    cursor: pointer;
+  }
+  .skills-img {
+    width: 30px;
+  }
+  .Logo {
+    width: 50px;
+  }
+  .skills-group {
+    left: 55% !important;
+  }
+
+
+  .name-contact {
+    font-size: 25px;
+  }
+  .holder-contact {
+    top: 8%;
+    left: 10%;
+  }
+  .email {
+    width: 20vw;
+    font-size: 15px;
+  }
+  .title {
+    width: 20vw;
+    font-size: 15px;
+  }
+  .content {
+    height: 35vh;
+    font-size: 15px;
+  }
+}
+@media(max-width: 440px){
+  .Top-tag0 {
+    font-size: 10px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 20px !important;
+  }
+  .skills-group {
+    left: 57% !important;
+  }
+  .about-title {
+    font-size: 12px !important;
+  }
+  .about-sentence {
+    font-size: 7px;
+  }
+  .canvas {
+    width: 10%;
+  }
+  .skills-title {
+  font-size: 15px !important;
+}
+}
+@media (max-width: 340px) {
+   .Top-tag0 {
+    font-size: 7px !important;
+  }
+  .Top-tag1, .Top-tag2, .Top-tag3 {
+    font-size: 17px !important;
+  }
 }

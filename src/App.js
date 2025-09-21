@@ -156,7 +156,9 @@ function App() {
     <div className='App'>
      <div className='Neon' style={{left: position.x, top: position.y}}></div>
      <div className='Section1'>  
-      <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
+      {!isLoaded ? (<div></div>) : (
+        <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
+      )}
       {focus === 'earth' && (
         <div className='about-sentence-group'>
         <motion.div className='about-title' initial={{opacity: 0}}
@@ -203,8 +205,13 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       )}
       {focus === 'moon' && (
         <motion.div className='contact-sentence' initial={{opacity: 0}}
-        animate={{opacity:1}} transition={{duration: 1.4}}>
-
+        animate={{opacity:10}} transition={{duration: 0.1}}>
+        <div className='holder-contact'>
+          <div className='name-contact'>Contact</div>
+          <input placeholder='Your Email' className='email'></input>
+          <input placeholder='Title' className='title'></input>
+          <textarea placeholder='Content' className='content'></textarea>
+        </div>
         </motion.div>
       )}
       <div className='Top-tag-group'>
@@ -227,13 +234,20 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       animate={{ opacity: 1, x: 0, y: 0}}
       transition={{duration: 1.8, delay: 0.6}} onClick={() => setFocus('moon') }
       >Contact</motion.div></>)
-      };
+      }
       </div>
-      <div className='buttom'>
+      {!isLoaded ? (<div></div>) : (
+         <div className='holder-bottom'>
+      <div className='bottom'>
+        <div className='popup-nameAndImg-github'>
+        <div className='popup-name'>Github</div>
         <a href='https://github.com/wprkftlgus' target='_blank'>
-        <img className='buttom-img-github' width={50} src='github2.png' /></a>
+        <img className='bottom-img-github' width={50} src='github2.png' /></a>
+        </div>
       </div>
-
+      </div>
+      )}
+      
       <Canvas className='canvas' camera={{ position: [0, 0, 18] }} >
         <Suspense fallback={
           <Html>
