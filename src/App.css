@@ -8,7 +8,7 @@
   
   background-color: #070707;
   color:  white;
-  background-image: url(C:\Users\-.-\Desktop\portpolioMain\public\space.jpg);
+  background-image: url('../public/space.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
