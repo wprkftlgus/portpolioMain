@@ -147,6 +147,15 @@ function App() {
     return() => window.removeEventListener('mousemove', moveHandler);
   },[]);
   const [focus, setFocus] = useState(null);
+  const slides = [0, 1, 2, 3];
+  const [index, setIndex] = useState(1);
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) %slides.length);
+  }
+  const PrevSlide = () => {
+    setIndex((prev) => ((prev - 1 + slides.length)) %slides.length);
+  }
+  
 
   const [isLoaded, setIsLoaded] = useState(false);
    const onSceneLoaded = () => {
@@ -199,13 +208,108 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       )}
       {focus === 'mars' && (
         <motion.div className='project-sentence' initial={{opacity: 0}}
-        animate={{opacity:1}} transition={{duration: 1.4}}>
+        animate={{opacity:1}} transition={{duration: 0}}>
+        <div className='holder-projects'>
+          <div className='button-previous' onClick={() => {
+            PrevSlide();
+          }}>Previous</div>
+          <div className='slides-wrapper'>
+          <div className='slides' style={{ transform: `translateX(-${index * 100}%)`}}>
+          
+          <div className='slide'>
+          <div className='title-project1'>1. Preown</div>
+          <div className='rightsection-project1'>
+          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='holder-project-skills'>
+            <div className='css-Full-Stack'>• Full-Stack</div>
+            <div className='css-React'>• React</div>
+            <div className='css-HTML'>• HTML</div>
+            <div className='css-CSS'>• CSS</div>
+            <div className='css-MongoDB'>• MongoDB</div>
+            <div className='css-Express'>• Express</div>
+            <div className='css-Router'>• Router</div>
+          </div>
+          <div className='bottom-project1'>
+          <div>Live</div>
+          <a></a>
+          <div>Git</div>
+          </div>
+          </div>
+          </div>
+          
+          <div className='slide'>
+          <div className='title-project2'>2. Preown</div>
+          <div className='rightsection-project1'>
+          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='holder-project-skills'>
+            <div className='css-Full-Stack'>• Full-Stack</div>
+            <div className='css-React'>• React</div>
+            <div className='css-HTML'>• HTML</div>
+            <div className='css-CSS'>• CSS</div>
+            <div className='css-MongoDB'>• MongoDB</div>
+            <div className='css-Express'>• Express</div>
+            <div className='css-Router'>• Router</div>
+          </div>
+          <div className='bottom-project1'>
+          <div>Live</div>
+          <a></a>
+          <div>Git</div>
+          </div>
+          </div>
+          </div>
 
+          <div className='slide'>
+          <div className='title-project3'>1. Preown</div>
+          <div className='rightsection-project1'>
+          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='holder-project-skills'>
+            <div className='css-Full-Stack'>• Full-Stack</div>
+            <div className='css-React'>• React</div>
+            <div className='css-HTML'>• HTML</div>
+            <div className='css-CSS'>• CSS</div>
+            <div className='css-MongoDB'>• MongoDB</div>
+            <div className='css-Express'>• Express</div>
+            <div className='css-Router'>• Router</div>
+          </div>
+          <div className='bottom-project1'>
+          <div>Live</div>
+          <a></a>
+          <div>Git</div>
+          </div>
+          </div>
+          </div>
+
+          <div className='slide'>
+          <div className='title-project4'>1. Preown</div>
+          <div className='rightsection-project1'>
+          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='holder-project-skills'>
+            <div className='css-Full-Stack'>• Full-Stack</div>
+            <div className='css-React'>• React</div>
+            <div className='css-HTML'>• HTML</div>
+            <div className='css-CSS'>• CSS</div>
+            <div className='css-MongoDB'>• MongoDB</div>
+            <div className='css-Express'>• Express</div>
+            <div className='css-Router'>• Router</div>
+          </div>
+          <div className='bottom-project1'>
+          <div>Live</div>
+          <a></a>
+          <div>Git</div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div onClick={() => {
+            nextSlide();
+          }}>nextSlide</div>
+        </div>
         </motion.div>
       )}
       {focus === 'moon' && (
         <motion.div className='contact-sentence' initial={{opacity: 0}}
-        animate={{opacity:10}} transition={{duration: 0.1}}>
+        animate={{opacity:10}} transition={{duration: 0}}>
         <div className='holder-contact'>
           <div className='name-contact'>Contact</div>
           <input placeholder='Your Email' className='email'></input>
