@@ -148,7 +148,7 @@ function App() {
   },[]);
   const [focus, setFocus] = useState(null);
   const slides = [0, 1, 2, 3];
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) %slides.length);
   }
@@ -172,7 +172,7 @@ function App() {
         <div className='about-sentence-group'>
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
-          Hello there👋, <br />This is Sihyeon! 
+          Hello there<div className='me'><div className='hand'></div></div>, <br />This is Sihyeon! 
         </motion.div>
           <motion.div className='about-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
@@ -212,7 +212,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
         <div className='holder-projects'>
           <div className='button-previous' onClick={() => {
             PrevSlide();
-          }}>Previous</div>
+          }}></div>
           <div className='slides-wrapper'>
           <div className='slides' style={{ transform: `translateX(-${index * 100}%)`}}>
           
@@ -232,15 +232,15 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git</div>
+          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'>https://github.com/wprkftlgus/mainresisterlogin</a>
           </div>
           </div>
           </div>
           
           <div className='slide'>
-          <div className='title-project2'>2. Preown</div>
+          <div className='title-project2'>2. MyRecipe</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='text-project1'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
           <div className='holder-project-skills'>
             <div className='css-Full-Stack'>• Full-Stack</div>
             <div className='css-React'>• React</div>
@@ -253,15 +253,15 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git</div>
+          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'>https://github.com/wprkftlgus/RecipeAPI</a>
           </div>
           </div>
           </div>
 
           <div className='slide'>
-          <div className='title-project3'>1. Preown</div>
+          <div className='title-project3'>3. The Space</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='text-project1'>My main portfolio website that got inspired from movie 'Interstellar'. User can watch all of my work here!</div>
           <div className='holder-project-skills'>
             <div className='css-Full-Stack'>• Full-Stack</div>
             <div className='css-React'>• React</div>
@@ -274,15 +274,15 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git</div>
+          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/portpolioMain'>https://github.com/wprkftlgus/portpolioMain</a>
           </div>
           </div>
           </div>
 
           <div className='slide'>
-          <div className='title-project4'>1. Preown</div>
+          <div className='title-project4'>4. SeanFlix</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
+          <div className='text-project1'>Netflix-Clone website</div>
           <div className='holder-project-skills'>
             <div className='css-Full-Stack'>• Full-Stack</div>
             <div className='css-React'>• React</div>
@@ -295,15 +295,15 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git</div>
+          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
           </div>
           </div>
           </div>
           </div>
           </div>
-          <div onClick={() => {
+          <div className='button-next' onClick={() => {
             nextSlide();
-          }}>nextSlide</div>
+          }}></div>
         </div>
         </motion.div>
       )}
@@ -354,11 +354,11 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       
       <Canvas className='canvas' camera={{ position: [0, 0, 18] }} >
         <Suspense fallback={
-          <Html>
-            <div className='background'>
-              <div className='Loading-bar'>Loding...</div>
-            </div>
-            
+          <Html fullscreen>
+              <div className="bugAndLoading">
+              <div className="bug"></div>
+              <div className="loading">Loading...</div>
+              </div>
           </Html>
         }>
          <Scene className="scene" focus = {focus} onLoad={onSceneLoaded}/>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap');
 .Title {
   font-size: 50px;
   text-align: center;
@@ -38,6 +39,26 @@
   z-index: 1;
   padding-left: 20px;
   cursor: pointer;
+}
+.me {
+  background-image: url('../public/hello.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.hand {
+  background-image: url('../public/waving-hand.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 70px;
+  animation: hand 2s ease infinite;
 }
 .about-sentence-group {
   position: absolute;
@@ -82,6 +103,7 @@
   
 }
 .holder-projects {
+  align-items: center;
   display: flex;
   top: 10%;
   left: 10%;
@@ -96,6 +118,14 @@
 }
 .button-previous {
   z-index: 101;
+  background-image: url('../public/arrow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 40px;
+  filter: invert(1);
+  cursor: pointer;
+  transform: rotate(180deg);
 }
 .slides-wrapper {
   width: 100vw;
@@ -178,6 +208,16 @@
 
 .content-project1 {
   font-size: 25px;
+}
+.button-next {
+  z-index: 101;
+  background-image: url('../public/arrow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 40px;
+  filter: invert(1);
+  cursor: pointer;
 }
 .holder-project-skills {
   display: flex;
@@ -334,21 +374,32 @@
   width: 100%;
   z-index: 0;
 }
-.background {
-  background-color: rgb(171, 122, 122);
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-.Loading-bar {
-  font-size: 100px;
-  text-align: center;
+.bugAndLoading {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 280px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 57px;
+  border-radius: 50px;
+  min-height: 650px;
+}
+.bug {
+  margin-top: 30vh;
+  background-image: url('../public/icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  animation: bugSpin 1.2s infinite;
+}
+.loading {
+  font-family: "Bitcount Prop Single Ink";
+  font-size: 60px;
 }
 
 @keyframes bottomWide {
@@ -364,6 +415,29 @@
     left: calc(50% - 250px);  
     opacity: 0.65;
   }
+}
+@keyframes hand {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
+@keyframes bugSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        
+        transform: rotate(360deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
 }
 @media (max-width: 1440px) {
   .name-contact {
