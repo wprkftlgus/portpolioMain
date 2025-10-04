@@ -5,6 +5,7 @@
   text-align: center;
   cursor: url() 160 160, auto  ;
 }
+
 .App {
   
   background-color: #070707;
@@ -205,7 +206,13 @@
   cursor: context-menu;
   font-weight: 700;
 }
-
+#git {
+  color: white;
+  text-decoration: none;
+}
+#git:hover {
+  text-decoration: underline;
+}
 .content-project1 {
   font-size: 25px;
 }
@@ -224,7 +231,7 @@
   gap: 20px;
 }
 .holder-contact {
-  top: 15%;
+  top: 10%;
   left: 25%;
   width: 45%;
   font-size: 20px;
@@ -274,6 +281,22 @@
   margin: 5px;
   resize: none;
 }
+.holder-check {
+  text-align: right;
+}
+.check {
+  cursor: pointer;
+  display: inline-block;
+  background-image: url('../public/check.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  filter: invert(0.7);
+}
+.check:hover {
+  filter: invert(0.9);
+}
 .Top-tag-group{
   font-family: "Bungee Inline", sans-serif;
   text-align: right;
@@ -313,16 +336,21 @@
 }
 .holder-bottom {
   text-align: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: -56px;
+  top: 90vh;
+  z-index: 100;
 }
 .bottom {
   background-color: rgb(70, 70, 70);
   border: 1px solid rgb(126, 126, 126);
   border-radius: 50px;
-  position: absolute;
+  margin: 0 auto;
   top: 90vh;
   left: 40vw;
   z-index: 2;
-  width: 100px;
+  max-width: 50vw;
   animation: bottomWide 2s ease forwards;
 }
 .popup-nameAndImg-github {
@@ -373,6 +401,7 @@
   height: 100vh;
   width: 100%;
   z-index: 0;
+  /* display: none;  */
 }
 .bugAndLoading {
   display: flex;
@@ -458,6 +487,15 @@
   }
 }
 @media (max-width: 1130px) {
+  .me {
+    width: 50px;
+    height: 50px;
+  }
+  .hand {
+    width: 30px;
+    height: 30px;
+    right: 40px;
+  }
   .name-contact {
     font-size: 35px;
   }
@@ -551,8 +589,15 @@
   .skills-group {
     left: 55% !important;
   }
-
-
+  .me {
+    width: 35px;
+    height: 35px;
+  }
+  .hand {
+    width: 20px;
+    height: 20px;
+    right: 30px;
+  }
   .name-contact {
     font-size: 25px;
   }
@@ -602,5 +647,8 @@
   }
   .Top-tag1, .Top-tag2, .Top-tag3 {
     font-size: 17px !important;
+  }
+  .loading {
+    font-size: 40px;
   }
 }

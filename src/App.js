@@ -62,7 +62,7 @@ function Scene({focus, onLoad}) {
     if (focus === 'earth' && earthRef.current) {
     const pos = new THREE.Vector3();
     earthRef.current.getWorldPosition(pos);
-    camera.position.lerp(new THREE.Vector3(pos.x + 1.5, pos.y-2 , pos.z + 2), 0.05);
+    camera.position.lerp(new THREE.Vector3(pos.x + 2, pos.y-3 , pos.z + 3), 0.05);
     camera.lookAt(pos);
   } else if (focus === 'mars' && marsRef.current) {
     const pos = new THREE.Vector3();
@@ -232,7 +232,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'>https://github.com/wprkftlgus/mainresisterlogin</a>
+          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'>https://github.com/wprkftlgus/mainresisterlogin</a>
           </div>
           </div>
           </div>
@@ -253,7 +253,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'>https://github.com/wprkftlgus/RecipeAPI</a>
+          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'>https://github.com/wprkftlgus/RecipeAPI</a>
           </div>
           </div>
           </div>
@@ -274,7 +274,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/portpolioMain'>https://github.com/wprkftlgus/portpolioMain</a>
+          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'>https://github.com/wprkftlgus/portpolioMain</a>
           </div>
           </div>
           </div>
@@ -295,7 +295,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='bottom-project1'>
           <div>Live</div>
           <a></a>
-          <div>Git:</div><a target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
+          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
           </div>
           </div>
           </div>
@@ -315,6 +315,9 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <input placeholder='Your Email' className='email'></input>
           <input placeholder='Title' className='title'></input>
           <textarea placeholder='Content' className='content'></textarea>
+          <div className='holder-check'>
+            <div className='check'></div>
+          </div>
         </div>
         </motion.div>
       )}
@@ -341,7 +344,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
       }
       </div>
       {!isLoaded ? (<div></div>) : (
-         <div className='holder-bottom'>
+      <div className='holder-bottom'>
       <div className='bottom'>
         <div className='popup-nameAndImg-github'>
         <div className='popup-name'>Github</div>
