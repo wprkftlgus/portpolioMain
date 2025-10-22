@@ -64,15 +64,21 @@
 .about-sentence-group {
   position: absolute;
   top: 10%;
-  left: 13%;
-  max-width: 400px;
-  width: 30%;
+  left: 10%;
+  width: 70vw;
   font-size: 20px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 20px;
   backdrop-filter: blur(4px);
   z-index: 10;
+  max-height: 80vh;
+  overflow: scroll;
+  scrollbar-width:unset;
+  overflow-x: hidden;
+}
+.about-sentence-group::-webkit-scrollbar {
+  
 }
 .about-title {
   font-size: 30px;
@@ -80,6 +86,60 @@
 }
 .about-sentence {
   padding-top: 15px;
+}
+.about-title-beyond {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.about-title2-beyond {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.about-beyond-holder {
+  margin: 0 auto;
+  width: 70%;
+}
+.about-beyond-flex {
+  display: flex;
+  gap: 20px;
+  
+}
+.about-beyond-component-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-beyond-subtitleNumber {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.about-progressBar {
+  max-width: 230px;
+  height: 20px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+.about-subtitle1-beyond {
+  font-size: 1.5rem;
+}
+.about-content1-beyond {
+  font-size: 1rem;
+  max-width: 350px;
+}
+.about-subtitle2-beyond {
+  font-size: 1.5rem;
+}
+.about-content2-beyond {
+  font-size: 1rem;
+  max-width: 350px;
+}
+.about-subtitle3-beyond {
+  font-size: 1.5rem;
+}
+.about-content3-beyond {
+  font-size: 1rem;
+  max-width: 350px;
 }
 .skills-group {
   width: 10%;
@@ -304,7 +364,7 @@
   flex-direction: column;
   position: absolute;
   z-index: 1;
-  right: 5%;
+  right: 2%;
   top: 10%;
 }
 .Top-tag0{
@@ -402,6 +462,7 @@
   width: 100%;
   z-index: 0;
   /* display: none;  */
+  display: none;
 }
 .bugAndLoading {
   display: flex;

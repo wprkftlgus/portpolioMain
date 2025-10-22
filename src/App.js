@@ -89,8 +89,8 @@ return(
     <primitive ref={marsRef} object={mars.scene} scale={3} position={[14, 0, 1]} />
     </Orbit>
     <Orbit speed={0.2} radius={10}>
-    <primitive ref={earthRef} object={earth.scene} scale={1.5}  />
-     <MoonOrbit speed={2} radius={0.001} focus={focus}>
+    <primitive ref={earthRef} object={earth.scene} scale={2}  />
+     <MoonOrbit speed={0.5} radius={0.001} focus={focus}>
       <primitive ref={moonRef} object={moon.scene} scale={0.5} position={[4, 0, 1]}/>
      </MoonOrbit>
     </Orbit>
@@ -172,7 +172,7 @@ function App() {
         <div className='about-sentence-group'>
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
-          Hello there<div className='me'><div className='hand'></div></div>, <br />This is Sihyeon! 
+          <div>My name is Jegal Sihyeon</div><div className='me'><div className='hand'></div></div>, <br />This is Sihyeon! 
         </motion.div>
           <motion.div className='about-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
@@ -184,6 +184,30 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
            <li>💪 18 months completed military service</li>
            <li>🏡 Airbnb business for 6 months with wife</li>
           </ul>
+        <div className='about-title-beyond'>"Beyond Code"</div>
+        <div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div>
+        <div className='about-beyond-holder'>
+        <div className='about-beyond-flex'>
+        <div className='about-beyond-component-flex'>
+        <div className='about-beyond-subtitleNumber'>01</div>
+        <div className='about-progressBar'></div>
+        <div className='about-subtitle1-beyond'>Non-stop Learning</div>
+        <div className='about-content1-beyond'>As a developer, it takes continuous effort and practice to learn new technologies and stay up to date with the latest trends.</div>
+        </div>
+        <div className='about-beyond-component-flex'>
+        <div className='about-beyond-subtitleNumber'>02</div>
+        <div className='about-progressBar'></div>
+        <div className='about-subtitle2-beyond'>Opened-minded</div>
+        <div className='about-content2-beyond'>A developer should have an open mindset — always ready to think differently and explore new directions beyond the conventional path.</div>
+        </div>
+        <div className='about-beyond-component-flex'>
+        <div className='about-beyond-subtitleNumber'>03</div>
+        <div className='about-progressBar'></div>
+        <div className='about-subtitle3-beyond'>Communicative</div>
+        <div className='about-content3-beyond'>Just as developers interact with computers through code, it’s equally important to communicate and exchange ideas with people. Strong communication skills are essential to put all of this into practice.</div>
+        </div>
+        </div>
+        </div>
         </motion.div>
         </div>
       )}
