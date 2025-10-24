@@ -208,28 +208,50 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
         </div>
         </div>
         </div>
+        <div>
+        <div className='about-holder-title-line'>
+          <div className='about-title-line1'>&lt;</div>
+          <div className='about-title-line2'>Tech Stacks</div>
+          <div className='about-title-line3'>/&gt;</div>
+        </div>
+        <div className='about-techstacks-flex-holder'>
+        <div className='about-techstacks-flex'>
+        <div className='about-holder-frontend'>
+          <div className='about-title-techstacks'>Front-End</div>
+          <div className='holder-frontend-icons'>
+          <div className='holder-icon'><div className='html'></div><div className='title-icon'>HTML</div></div>
+          <div className='holder-icon'><div className='css'></div><div className='title-icon'>CSS</div></div>
+          <div className='holder-icon'><div className='java'></div><div className='title-icon'>JAVA</div></div>
+          <div className='holder-icon'><div className='react'></div><div className='title-icon'>React</div></div>
+          </div>
+        </div>
+        <div className='about-holder-backend'>
+          <div className='about-title-techstacks'>Back-End</div>
+          <div className='holder-backend-icons'>
+          <div className='holder-icon'><div className='node'></div><div className='title-icon'>Node.js</div></div>
+          <div className='holder-icon'><div className='express'></div><div className='title-icon'>Express.js</div></div>
+          <div className='holder-icon'><div className='mongodb'></div><div className='title-icon'>MongoDB</div></div>
+          <div className='holder-icon'><div className='render'></div><div className='title-icon'>Render</div></div>
+          <div className='holder-icon'><div className='restapi'></div><div className='title-icon'>RestAPI</div></div>
+          <div className='holder-icon'><div className='router'></div><div className='title-icon'>Router</div></div>
+        </div>
+        </div>
+        </div>
+        <div className='about-holder-techtools'>
+          <div className='about-title-techstacks'>Tech & Tools</div>
+          <div className='holder-backend-icons'>
+          <div className='holder-icon'><div className='vs'></div><div className='title-icon'>VS code</div></div>
+          <div className='holder-icon'><div className='git'></div><div className='title-icon'>Git</div></div>
+          <div className='holder-icon'><div className='github'></div><div className='title-icon'>Github</div></div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div className='about-line'></div>
         </motion.div>
         </div>
       )}
-      {focus === 'earth' && (
-        <div className='skills-group'>
-        <motion.div initial={{opacity: 0}}
-         animate={{opacity:1}} transition={{duration: 1.4}}>
-          <div className='skills-title'>Skills</div>
-          <ul className='skills-ul'>
-            <li className='skills-units'><img className='skills-img' width={50} src='\react.png' /></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\html.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\css.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\js.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\nodejs.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\github1.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\vs.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} src='\mongo.png'/></li>
-            <li className='skills-units'><img className='skills-img' width={50} /></li>
-          </ul>
-        </motion.div>
-        </div>
-      )}
+      
       {focus === 'mars' && (
         <motion.div className='project-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 0}}>
@@ -373,7 +395,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
         <div className='popup-nameAndImg-github'>
         <div className='popup-name'>Github</div>
         <a href='https://github.com/wprkftlgus' target='_blank'>
-        <img className='bottom-img-github' width={50} src='github2.png' /></a>
+        <div className='bottomgit'></div></a>
         </div>
       </div>
       </div>

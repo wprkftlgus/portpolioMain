@@ -67,7 +67,7 @@
   left: 10%;
   width: 70vw;
   font-size: 20px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.85);
   border-radius: 15px;
   padding: 20px;
   backdrop-filter: blur(4px);
@@ -100,6 +100,7 @@
 .about-beyond-holder {
   margin: 0 auto;
   width: 70%;
+  margin-bottom: 10rem;
 }
 .about-beyond-flex {
   display: flex;
@@ -140,6 +141,197 @@
 .about-content3-beyond {
   font-size: 1rem;
   max-width: 350px;
+}
+.about-holder-title-line {
+  display: flex;
+  margin: 0 auto;
+  max-width: 23rem;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.about-title-line1 {
+  font-size: 3rem;
+  color: #4a00e0;
+}
+.about-title-line2 {
+  font-size: 3rem;
+}
+.about-title-line3 {
+  font-size: 3rem;
+  color: #4a00e0;
+}
+.about-line {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  height: 0.15rem;
+  position: relative;
+  top: -25px;
+}
+.about-techstacks-flex-holder {
+  width: 100%;
+  margin: 0 auto;
+}
+.about-techstacks-flex {
+  display: flex;
+  margin-top: 4rem;
+}
+.about-holder-frontend {
+  width: 100%;
+  height: 100%;
+}
+.about-title-techstacks {
+  font-size: 2rem;
+  width: 250px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+.holder-icon {
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(46, 4, 46);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.1s;
+}
+.holder-icon:hover {
+  transform: scale(1.05);
+}
+.holder-frontend-icons {
+  width: 260px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px; 
+  gap: 38px;
+}
+.holder-backend-icons {
+  width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px; 
+  gap: 38px;
+}
+.title-icon {
+  font-weight: 500;
+}
+.html {
+  background-image: url('../public/html.png');
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css {
+  margin: 0 auto;
+  background-image: url('../public/css.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.java {
+  margin: 0 auto;
+  background-image: url('../public/js.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.react {
+  margin: 0 auto;
+  background-image: url('../public/react.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-holder-backend {
+  width: 100%;
+}
+.node {
+  margin: 0 auto;
+  background-image: url('../public/node-js.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.express {
+  margin: 0 auto;
+  background-image: url('../public/express.png');
+  filter: invert(1);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mongodb {
+  margin: 0 auto;
+  background-image: url('../public/mongodb.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.render {
+  margin: 0 auto;
+  background-image: url('../public/render.png');
+  filter: invert(1);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.restapi {
+  margin: 0 auto;
+  background-image: url('../public/database.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.router {
+  margin: 0 auto;
+  background-image: url('../public/router-svgrepo-com.png');
+  filter: invert(1);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-holder-techtools {
+  margin-top: 10rem;
+}
+.vs {
+  margin: 0 auto;
+  background-image: url('../public/vs.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.git {
+  margin: 0 auto;
+  background-image: url('../public/social.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.github {
+  margin: 0 auto;
+  background-image: url('../public/github.png');
+  filter: invert(1);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .skills-group {
   width: 10%;
@@ -434,6 +626,14 @@
 .popup-nameAndImg-github:hover .popup-name {
   display: inline-block;
 }
+.bottomgit {
+  margin: 0 auto;
+  background-image: url('../public/github.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .Body-title1 {
   font-size: 40px;
   font-weight: 600;
@@ -462,7 +662,7 @@
   width: 100%;
   z-index: 0;
   /* display: none;  */
-  display: none;
+ 
 }
 .bugAndLoading {
   display: flex;
