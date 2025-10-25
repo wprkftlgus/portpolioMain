@@ -172,19 +172,24 @@ function App() {
         <div className='about-sentence-group'>
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
-          <div>My name is Jegal Sihyeon</div><div className='me'><div className='hand'></div></div>, <br />This is Sihyeon! 
+          <div className='about-bug'></div>
+          <div>Hi, my name is</div>
+          <div className='about-title-myname'>Jegal Sihyeon</div>
+          <div className='about-subtitle'>I’m now determined to grow as a 
+          <div className='about-letter-fullstack'>Full-Stack</div>developer.  
+I love building engaging and interactive web applications, and 
+I'm eager to bring fresh ideas and technical skills to every project I take on.</div>
+          <div className='me'><div className='hand'></div></div>
         </motion.div>
           <motion.div className='about-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
-           <br /> I’m now determined to grow as a Full-Stack developer.  
-I love building engaging and interactive web applications, and 
-I'm eager to bring fresh ideas and technical skills to every project I take on.
+           <br /> 
           <ul>
            <li>🚢 graduated of Naval Engineering, at University of Ulsan</li>
            <li>💪 18 months completed military service</li>
            <li>🏡 Airbnb business for 6 months with wife</li>
           </ul>
-        <div className='about-title-beyond'>"Beyond Code"</div>
+        <div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-beyond'>"Beyond Code"</div><div className='line'></div></div>
         <div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div>
         <div className='about-beyond-holder'>
         <div className='about-beyond-flex'>
@@ -210,9 +215,11 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
         </div>
         <div>
         <div className='about-holder-title-line'>
+          <div className='line'></div>
           <div className='about-title-line1'>&lt;</div>
           <div className='about-title-line2'>Tech Stacks</div>
           <div className='about-title-line3'>/&gt;</div>
+          <div className='line'></div>
         </div>
         <div className='about-techstacks-flex-holder'>
         <div className='about-techstacks-flex'>
@@ -243,11 +250,12 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.
           <div className='holder-icon'><div className='vs'></div><div className='title-icon'>VS code</div></div>
           <div className='holder-icon'><div className='git'></div><div className='title-icon'>Git</div></div>
           <div className='holder-icon'><div className='github'></div><div className='title-icon'>Github</div></div>
+          <div className='holder-icon'><div className='netlify'></div><div className='title-icon'>Netlify</div></div>
+          <div className='holder-icon'><div className='bootstrap'></div><div className='title-icon'>Bootstrap</div></div>
           </div>
         </div>
         </div>
         </div>
-        <div className='about-line'></div>
         </motion.div>
         </div>
       )}
