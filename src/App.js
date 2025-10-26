@@ -183,13 +183,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </motion.div>
           <motion.div className='about-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
-           <br /> 
-          <ul>
-           <li>🚢 graduated of Naval Engineering, at University of Ulsan</li>
-           <li>💪 18 months completed military service</li>
-           <li>🏡 Airbnb business for 6 months with wife</li>
-          </ul>
-        <div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-beyond'>"Beyond Code"</div><div className='line'></div></div>
+        <div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-line1'>&lt;</div><div className='about-title-beyond'>Beyond Code</div><div className='about-title-line3'>/&gt;</div><div className='line'></div></div>
         <div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div>
         <div className='about-beyond-holder'>
         <div className='about-beyond-flex'>
@@ -213,7 +207,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </div>
         </div>
         </div>
-        <div>
+        <div className='about-holder-techstacks'>
         <div className='about-holder-title-line'>
           <div className='line'></div>
           <div className='about-title-line1'>&lt;</div>
@@ -256,6 +250,45 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </div>
         </div>
         </div>
+        <div className='about-holder-title-line'>
+          <div className='line'></div>
+          <div className='about-title-line1'>&lt;</div>
+          <div className='about-title-line2'>Experiences</div>
+          <div className='about-title-line3'>/&gt;</div>
+          <div className='line'></div>
+        </div>
+        <div className='about-container-experience'>
+          <div className='about-line-experience'></div>
+          <div className='about-holder-content-experience'>
+          <div className='about-holder-contentAndIcon-experience'>
+          <div>
+          <div className='about-title-experience'>🚢 Graduated with a Bachelor’s Degree in Naval Architecture and Ocean Engineering</div>
+          <div className='about-date-experience'>01/03/2020 ~ 26/12/2025</div>
+          <div className='about-subtitle-experience'>University of Ulsan, South Korea (4 years) Developed a strong foundation in problem-solving, analytical thinking, and system design through rigorous engineering 
+          coursework and team projects. My academic background helped me build logical thinking skills that I now apply to web development and software architecture.</div>
+          </div>
+          <div className='checked'></div>
+          </div>
+          <div className='about-holder-contentAndIcon-experience'>
+          <div>
+          <div className='about-title-experience'>💪 Completed 18 months of mandatory military service in Korea</div> 
+          <div className='about-date-experience'>18/11/2020 ~ 17/05/2023</div>
+          <div className='about-subtitle-experience'>Served as a driver-soldier Successfully fulfilled national service with discipline and responsibility. During my service, I learned how to stay calm under pressure, work efficiently in structured environments, 
+          and collaborate closely with teammates to achieve collective goals.</div>
+          </div>
+          <div className='checked'></div>
+          </div>
+          <div className='about-holder-contentAndIcon-experience'>
+          <div>
+          <div className='about-title-experience'>🏡 Running an Airbnb business in Leeds, UK (with my wife)</div>   
+          <div className='about-date-experience'>01/03/2025 ~ 01/09/2025</div>
+          <div className='about-subtitle-experience'>6 months of hands-on experience in property management and customer service Co-managed an Airbnb property, handling guest communication, logistics, and maintenance. This experience strengthened my communication skills, 
+          attention to detail, and ability to provide excellent user experiences — qualities that I also value as a developer when building digital products.</div>
+          </div>
+          <div className='checked'></div>
+          </div>
+          </div>
+          </div>
         </motion.div>
         </div>
       )}
@@ -271,7 +304,8 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           <div className='slides' style={{ transform: `translateX(-${index * 100}%)`}}>
           
           <div className='slide'>
-          <div className='title-project1'>1. Preown</div>
+          <div className='pictures-project'></div>
+          <div className='title-project1'>Loop Market</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
           <div className='holder-project-skills'>
@@ -284,7 +318,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Router'>• Router</div>
           </div>
           <div className='bottom-project1'>
-          <div>Live</div>
+          <div>Live</div><a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>https://mainresgisterlogin.netlify.app/</a>
           <a></a>
           <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'>https://github.com/wprkftlgus/mainresisterlogin</a>
           </div>
@@ -292,7 +326,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           </div>
           
           <div className='slide'>
-          <div className='title-project2'>2. MyRecipe</div>
+          <div className='title-project2'>MyRecipe</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
           <div className='holder-project-skills'>
@@ -305,7 +339,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Router'>• Router</div>
           </div>
           <div className='bottom-project1'>
-          <div>Live</div>
+          <div>Live</div><a id='live' target='_blank' href='https://recipeapibysihyeon.netlify.app/'>https://recipeapibysihyeon.netlify.app/</a>
           <a></a>
           <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'>https://github.com/wprkftlgus/RecipeAPI</a>
           </div>
@@ -313,7 +347,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           </div>
 
           <div className='slide'>
-          <div className='title-project3'>3. The Space</div>
+          <div className='title-project3'>The Space</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>My main portfolio website that got inspired from movie 'Interstellar'. User can watch all of my work here!</div>
           <div className='holder-project-skills'>
@@ -326,7 +360,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Router'>• Router</div>
           </div>
           <div className='bottom-project1'>
-          <div>Live</div>
+          <div>Live</div><a id='live' target='_blank' href='https://spacebysihyeon.netlify.app/'>https://spacebysihyeon.netlify.app/</a>
           <a></a>
           <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'>https://github.com/wprkftlgus/portpolioMain</a>
           </div>
@@ -334,7 +368,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           </div>
 
           <div className='slide'>
-          <div className='title-project4'>4. SeanFlix</div>
+          <div className='title-project4'>SeanFlix</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>Netflix-Clone website</div>
           <div className='holder-project-skills'>
@@ -347,7 +381,28 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Router'>• Router</div>
           </div>
           <div className='bottom-project1'>
-          <div>Live</div>
+          <div>Live</div><a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>https://netflisclonebysihyeon.netlify.app/</a>
+          <a></a>
+          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
+          </div>
+          </div>
+          </div>
+
+          <div className='slide'>
+          <div className='title-project4'>Calculator</div>
+          <div className='rightsection-project1'>
+          <div className='text-project1'>calculator working</div>
+          <div className='holder-project-skills'>
+            <div className='css-Full-Stack'>• Full-Stack</div>
+            <div className='css-React'>• React</div>
+            <div className='css-HTML'>• HTML</div>
+            <div className='css-CSS'>• CSS</div>
+            <div className='css-MongoDB'>• MongoDB</div>
+            <div className='css-Express'>• Express</div>
+            <div className='css-Router'>• Router</div>
+          </div>
+          <div className='bottom-project1'>
+          <div>Live</div><a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>https://netflisclonebysihyeon.netlify.app/</a>
           <a></a>
           <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
           </div>
