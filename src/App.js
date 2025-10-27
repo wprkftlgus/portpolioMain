@@ -139,13 +139,7 @@ function Orbit({ speed, radius, children }) {
 
 function App() {
   const [position, setPosition] = useState({x:0, y:0});
-  useEffect(() => {
-    const moveHandler = (e) => {
-      setPosition({x:e.clientX, y:e.clientY})
-    };
-    window.addEventListener('mousemove', moveHandler);
-    return() => window.removeEventListener('mousemove', moveHandler);
-  },[]);
+  
   const [focus, setFocus] = useState(null);
   const slides = [0, 1, 2, 3];
   const [index, setIndex] = useState(0);
@@ -161,9 +155,46 @@ function App() {
    const onSceneLoaded = () => {
     setIsLoaded(true);
   };
+
+  function AnimationChildren({ children, threshold = 0.4}){
+    const [visible, setVisible] = useState(false);
+    const ref = useRef();
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting)
+          setVisible(true);}, { threshold }
+      );
+      if (ref.current){observer.observe(ref.current);}
+      return () => observer.disconnect();
+    },[threshold]);
+    return(
+      <div ref={ref} className={visible ? children.props.className:"invisible"}>{children}</div>
+    )
+  }
+
+  function Animation({ children, threshold = 0.4}){
+    const [visible, setVisible] = useState(false);
+    const ref = useRef();
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting)
+          setVisible(true);}, { threshold }
+      );
+      if (ref.current){observer.observe(ref.current);}
+      return () => observer.disconnect();
+    },[threshold]);
+    return(
+      <div ref={ref} className={visible ? children.props.className:""}></div>
+    )
+  }
+
   return (
     <div className='App'>
-     <div className='Neon' style={{left: position.x, top: position.y}}></div>
+     
      <div className='Section1'>  
       {!isLoaded ? (<div></div>) : (
         <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
@@ -183,37 +214,39 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </motion.div>
           <motion.div className='about-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
-        <div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-line1'>&lt;</div><div className='about-title-beyond'>Beyond Code</div><div className='about-title-line3'>/&gt;</div><div className='line'></div></div>
+        <AnimationChildren><div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-line1'>&lt;</div><div className='about-title-beyond'>Beyond Code</div><div className='about-title-line3'>/&gt;</div><div className='line'></div></div></AnimationChildren>
         <div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div>
         <div className='about-beyond-holder'>
+        <AnimationChildren>
         <div className='about-beyond-flex'>
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>01</div>
-        <div className='about-progressBar'></div>
+        <Animation><div className='about-progressBar'></div></Animation>
         <div className='about-subtitle1-beyond'>Non-stop Learning</div>
         <div className='about-content1-beyond'>As a developer, it takes continuous effort and practice to learn new technologies and stay up to date with the latest trends.</div>
         </div>
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>02</div>
-        <div className='about-progressBar'></div>
+        <Animation><div className='about-progressBar'></div></Animation>
         <div className='about-subtitle2-beyond'>Opened-minded</div>
         <div className='about-content2-beyond'>A developer should have an open mindset — always ready to think differently and explore new directions beyond the conventional path.</div>
         </div>
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>03</div>
-        <div className='about-progressBar'></div>
+        <Animation><div className='about-progressBar'></div></Animation>
         <div className='about-subtitle3-beyond'>Communicative</div>
         <div className='about-content3-beyond'>Just as developers interact with computers through code, it’s equally important to communicate and exchange ideas with people. Strong communication skills are essential to put all of this into practice.</div>
         </div>
         </div>
+        </AnimationChildren>
         </div>
         <div className='about-holder-techstacks'>
         <div className='about-holder-title-line'>
-          <div className='line'></div>
+          <Animation><div className='line'></div></Animation>
           <div className='about-title-line1'>&lt;</div>
           <div className='about-title-line2'>Tech Stacks</div>
           <div className='about-title-line3'>/&gt;</div>
-          <div className='line'></div>
+          <Animation><div className='line'></div></Animation>
         </div>
         <div className='about-techstacks-flex-holder'>
         <div className='about-techstacks-flex'>
@@ -251,41 +284,41 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </div>
         </div>
         <div className='about-holder-title-line'>
-          <div className='line'></div>
+          <Animation><div className='line'></div></Animation>
           <div className='about-title-line1'>&lt;</div>
           <div className='about-title-line2'>Experiences</div>
           <div className='about-title-line3'>/&gt;</div>
-          <div className='line'></div>
+          <Animation><div className='line'></div></Animation>
         </div>
         <div className='about-container-experience'>
-          <div className='about-line-experience'></div>
+          <Animation><div className='about-line-experience'></div></Animation>
           <div className='about-holder-content-experience'>
           <div className='about-holder-contentAndIcon-experience'>
-          <div>
+          <AnimationChildren ><div className='about-titleAndSubtitle-experience'>
           <div className='about-title-experience'>🚢 Graduated with a Bachelor’s Degree in Naval Architecture and Ocean Engineering</div>
           <div className='about-date-experience'>01/03/2020 ~ 26/12/2025</div>
           <div className='about-subtitle-experience'>University of Ulsan, South Korea (4 years) Developed a strong foundation in problem-solving, analytical thinking, and system design through rigorous engineering 
           coursework and team projects. My academic background helped me build logical thinking skills that I now apply to web development and software architecture.</div>
-          </div>
-          <div className='checked'></div>
+          </div></AnimationChildren>
+          <Animation><div className='checked'></div></Animation>
           </div>
           <div className='about-holder-contentAndIcon-experience'>
-          <div>
+          <AnimationChildren><div className='about-titleAndSubtitle-experience'>
           <div className='about-title-experience'>💪 Completed 18 months of mandatory military service in Korea</div> 
           <div className='about-date-experience'>18/11/2020 ~ 17/05/2023</div>
           <div className='about-subtitle-experience'>Served as a driver-soldier Successfully fulfilled national service with discipline and responsibility. During my service, I learned how to stay calm under pressure, work efficiently in structured environments, 
           and collaborate closely with teammates to achieve collective goals.</div>
-          </div>
-          <div className='checked'></div>
+          </div></AnimationChildren>
+          <Animation><div className='checked'></div></Animation>
           </div>
           <div className='about-holder-contentAndIcon-experience'>
-          <div>
+          <AnimationChildren><div className='about-titleAndSubtitle-experience'>
           <div className='about-title-experience'>🏡 Running an Airbnb business in Leeds, UK (with my wife)</div>   
           <div className='about-date-experience'>01/03/2025 ~ 01/09/2025</div>
           <div className='about-subtitle-experience'>6 months of hands-on experience in property management and customer service Co-managed an Airbnb property, handling guest communication, logistics, and maintenance. This experience strengthened my communication skills, 
           attention to detail, and ability to provide excellent user experiences — qualities that I also value as a developer when building digital products.</div>
-          </div>
-          <div className='checked'></div>
+          </div></AnimationChildren>
+          <Animation><div className='checked'></div></Animation>
           </div>
           </div>
           </div>
@@ -481,7 +514,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
          luminanceSmoothing={1} radius={0.7} height={100} />
          </EffectComposer>
         <directionalLight position={[-2, 2, 2]} intensity={1} />
-        <ambientLight position={[2, 2, 2]} intensity={1} />
+        <ambientLight position={[2, 2, 2]} intensity={2} />
       </Canvas>
       
       </div>
