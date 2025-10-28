@@ -1,4 +1,4 @@
-import React, { useRef ,useState, useEffect, Suspense } from 'react';
+import React, { useRef ,useState, useEffect, Suspense, cloneElement } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import './App.css';
@@ -156,7 +156,7 @@ function App() {
     setIsLoaded(true);
   };
 
-  function AnimationChildren({ children, threshold = 0.4}){
+  function AnimationChildren({ children, threshold = 0.5}){
     const [visible, setVisible] = useState(false);
     const ref = useRef();
 
@@ -174,7 +174,23 @@ function App() {
     )
   }
 
-  function Animation({ children, threshold = 0.4}){
+  function AnimationClone({ children, threshold = 0.5}){
+    const [visible, setVisible] = useState(false);
+    const ref = useRef();
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting)
+          setVisible(true);}, { threshold }
+      );
+      if (ref.current){observer.observe(ref.current);}
+      return () => observer.disconnect();
+    },[threshold]);
+    return cloneElement(children, {ref, className: visible ? children.props.className : "invisible"})
+  }
+
+  function Animation({ children, threshold = 0.5}){
     const [visible, setVisible] = useState(false);
     const ref = useRef();
 
@@ -212,10 +228,16 @@ I love building engaging and interactive web applications, and
 I'm eager to bring fresh ideas and technical skills to every project I take on.</div>
           <div className='me'><div className='hand'></div></div>
         </motion.div>
-          <motion.div className='about-sentence' initial={{opacity: 0}}
-        animate={{opacity:1}} transition={{duration: 1.7, delay: 0.6}}>
-        <AnimationChildren><div className='about-titleAndLine-beyond'><div className='line'></div><div className='about-title-line1'>&lt;</div><div className='about-title-beyond'>Beyond Code</div><div className='about-title-line3'>/&gt;</div><div className='line'></div></div></AnimationChildren>
-        <div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div>
+        <div className='about-sentence'>
+        
+        <div className='about-titleAndLine-beyond'>
+        <div className='line'></div>
+        <div className='about-title-line1'>&lt;</div>
+        <div className='about-title-beyond'>Beyond Code</div>
+        <div className='about-title-line3'>/&gt;</div>
+        <div className='line'></div>
+        </div>
+        <AnimationChildren><div className='about-title2-beyond'>As a developer, I believe growth comes from continuously learning new technologies, keeping an open mind to explore different perspectives, and effectively communicating with others to turn ideas into reality.</div></AnimationChildren>
         <div className='about-beyond-holder'>
         <AnimationChildren>
         <div className='about-beyond-flex'>
@@ -242,53 +264,62 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         </div>
         <div className='about-holder-techstacks'>
         <div className='about-holder-title-line'>
-          <Animation><div className='line'></div></Animation>
+          <div className='line'></div>
           <div className='about-title-line1'>&lt;</div>
           <div className='about-title-line2'>Tech Stacks</div>
           <div className='about-title-line3'>/&gt;</div>
-          <Animation><div className='line'></div></Animation>
+          <div className='line'></div>
         </div>
         <div className='about-techstacks-flex-holder'>
         <div className='about-techstacks-flex'>
+        
         <div className='about-holder-frontend'>
           <div className='about-title-techstacks'>Front-End</div>
+          
           <div className='holder-frontend-icons'>
-          <div className='holder-icon'><div className='html'></div><div className='title-icon'>HTML</div></div>
-          <div className='holder-icon'><div className='css'></div><div className='title-icon'>CSS</div></div>
-          <div className='holder-icon'><div className='java'></div><div className='title-icon'>JAVA</div></div>
-          <div className='holder-icon'><div className='react'></div><div className='title-icon'>React</div></div>
+          <AnimationClone><div className='holder-icon'><div className='html'></div><div className='title-icon'>HTML</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='css'></div><div className='title-icon'>CSS</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='java'></div><div className='title-icon'>JAVA</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='react'></div><div className='title-icon'>React</div></div></AnimationClone>
+          
           </div>
+          
         </div>
+        
         <div className='about-holder-backend'>
           <div className='about-title-techstacks'>Back-End</div>
+        <AnimationChildren>
           <div className='holder-backend-icons'>
-          <div className='holder-icon'><div className='node'></div><div className='title-icon'>Node.js</div></div>
-          <div className='holder-icon'><div className='express'></div><div className='title-icon'>Express.js</div></div>
-          <div className='holder-icon'><div className='mongodb'></div><div className='title-icon'>MongoDB</div></div>
-          <div className='holder-icon'><div className='render'></div><div className='title-icon'>Render</div></div>
-          <div className='holder-icon'><div className='restapi'></div><div className='title-icon'>RestAPI</div></div>
-          <div className='holder-icon'><div className='router'></div><div className='title-icon'>Router</div></div>
+          <AnimationClone><div className='holder-icon'><div className='node'></div><div className='title-icon'>Node.js</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='express'></div><div className='title-icon'>Express.js</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='mongodb'></div><div className='title-icon'>MongoDB</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='render'></div><div className='title-icon'>Render</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='restapi'></div><div className='title-icon'>RestAPI</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='router'></div><div className='title-icon'>Router</div></div></AnimationClone>
         </div>
+        </AnimationChildren>
         </div>
         </div>
         <div className='about-holder-techtools'>
           <div className='about-title-techstacks'>Tech & Tools</div>
-          <div className='holder-backend-icons'>
-          <div className='holder-icon'><div className='vs'></div><div className='title-icon'>VS code</div></div>
-          <div className='holder-icon'><div className='git'></div><div className='title-icon'>Git</div></div>
-          <div className='holder-icon'><div className='github'></div><div className='title-icon'>Github</div></div>
-          <div className='holder-icon'><div className='netlify'></div><div className='title-icon'>Netlify</div></div>
-          <div className='holder-icon'><div className='bootstrap'></div><div className='title-icon'>Bootstrap</div></div>
+          <AnimationChildren>
+          <div className='holder-techAndTools-icons'>
+          <AnimationClone><div className='holder-icon'><div className='vs'></div><div className='title-icon'>VS code</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='git'></div><div className='title-icon'>Git</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='github'></div><div className='title-icon'>Github</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='netlify'></div><div className='title-icon'>Netlify</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='bootstrap'></div><div className='title-icon'>Bootstrap</div></div></AnimationClone>
           </div>
+          </AnimationChildren>
         </div>
         </div>
         </div>
         <div className='about-holder-title-line'>
-          <Animation><div className='line'></div></Animation>
+          <div className='line'></div>
           <div className='about-title-line1'>&lt;</div>
           <div className='about-title-line2'>Experiences</div>
           <div className='about-title-line3'>/&gt;</div>
-          <Animation><div className='line'></div></Animation>
+          <div className='line'></div>
         </div>
         <div className='about-container-experience'>
           <Animation><div className='about-line-experience'></div></Animation>
@@ -322,7 +353,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           </div>
           </div>
           </div>
-        </motion.div>
+        </div>
         </div>
       )}
       
