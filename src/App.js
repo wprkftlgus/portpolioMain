@@ -141,8 +141,9 @@ function App() {
   const [position, setPosition] = useState({x:0, y:0});
   
   const [focus, setFocus] = useState(null);
-  const slides = [0, 1, 2, 3];
+  const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
+  const [hover, setHover] = useState(false);
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) %slides.length);
   }
@@ -368,7 +369,10 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           <div className='slides' style={{ transform: `translateX(-${index * 100}%)`}}>
           
           <div className='slide'>
-          <div className='pictures-project'></div>
+          <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
+            <div className='picture-project1'>{hover && (<div className='live-button'>Live</div>)}</div>
+          </div>
+          
           <div className='title-project1'>Loop Market</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
@@ -390,6 +394,9 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           </div>
           
           <div className='slide'>
+            <div className='holder-picture-project'>
+            <div className='picture-project2'><div className='live-button'>Live</div></div>
+          </div>
           <div className='title-project2'>MyRecipe</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
