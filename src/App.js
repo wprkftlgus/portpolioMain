@@ -216,8 +216,10 @@ function App() {
       {!isLoaded ? (<div></div>) : (
         <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
       )}
+      {focus === 'earth' && (<div className='about-fold'>Fold</div>)}
       {focus === 'earth' && (
         <div className='about-sentence-group'>
+        
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
           <div className='about-bug'></div>
@@ -327,6 +329,16 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           <div className='about-holder-content-experience'>
           <div className='about-holder-contentAndIcon-experience'>
           <AnimationChildren ><div className='about-titleAndSubtitle-experience'>
+          <div className='about-title-experience'>💻 Self-taught Full Stack Developer</div>
+          <div className='about-date-experience'>01/03/2020 ~ Present</div>
+          <div className='about-subtitle-experience'>Learned web development independently through various online resources and personal projects.
+Although my learning pace was irregular due to military service (1.5 years) and other commitments, I continued improving my skills and completed several front-end projects to strengthen my portfolio.</div>
+          </div></AnimationChildren>
+          <Animation><div className='onair-red'></div></Animation>
+          <Animation><div className='onair'></div></Animation>
+          </div>
+          <div className='about-holder-contentAndIcon-experience'>
+          <AnimationChildren ><div className='about-titleAndSubtitle-experience'>
           <div className='about-title-experience'>🚢 Graduated with a Bachelor’s Degree in Naval Architecture and Ocean Engineering</div>
           <div className='about-date-experience'>01/03/2020 ~ 26/12/2025</div>
           <div className='about-subtitle-experience'>University of Ulsan, South Korea (4 years) Developed a strong foundation in problem-solving, analytical thinking, and system design through rigorous engineering 
@@ -370,7 +382,13 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           
           <div className='slide'>
           <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
-            <div className='picture-project1'>{hover && (<div className='live-button'>Live</div>)}</div>
+            <div className='picture-project1'>{hover && (
+              <div className='liveAndGit-button'>
+              <a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>
+              <div className='live-button'>Live</div>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'><div className='git-button'>Git</div></a>
+              </a>
+              </div>)}</div>
           </div>
           
           <div className='title-project1'>Loop Market</div>
@@ -385,17 +403,18 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Express'>• Express</div>
             <div className='css-Router'>• Router</div>
           </div>
-          <div className='bottom-project1'>
-          <div>Live</div><a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>https://mainresgisterlogin.netlify.app/</a>
-          <a></a>
-          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'>https://github.com/wprkftlgus/mainresisterlogin</a>
-          </div>
           </div>
           </div>
           
           <div className='slide'>
-            <div className='holder-picture-project'>
-            <div className='picture-project2'><div className='live-button'>Live</div></div>
+          <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
+            <div className='picture-project2'>{hover && (
+              <div className='liveAndGit-button'>
+              <a id='live' target='_blank' href='https://recipeapibysihyeon.netlify.app/'>
+              <div className='live-button'>Live</div>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'><div className='git-button'>Git</div></a>
+              </a>
+              </div>)}</div>
           </div>
           <div className='title-project2'>MyRecipe</div>
           <div className='rightsection-project1'>
@@ -409,15 +428,19 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Express'>• Express</div>
             <div className='css-Router'>• Router</div>
           </div>
-          <div className='bottom-project1'>
-          <div>Live</div><a id='live' target='_blank' href='https://recipeapibysihyeon.netlify.app/'>https://recipeapibysihyeon.netlify.app/</a>
-          <a></a>
-          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'>https://github.com/wprkftlgus/RecipeAPI</a>
-          </div>
           </div>
           </div>
 
           <div className='slide'>
+          <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
+            <div className='picture-project3'>{hover && (
+              <div className='liveAndGit-button'>
+              <a id='live' target='_blank' href='https://spacebysihyeon.netlify.app/'>
+              <div className='live-button'>Live</div>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'><div className='git-button'>Git</div></a>
+              </a>
+              </div>)}</div>
+          </div>
           <div className='title-project3'>The Space</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>My main portfolio website that got inspired from movie 'Interstellar'. User can watch all of my work here!</div>
@@ -430,15 +453,19 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Express'>• Express</div>
             <div className='css-Router'>• Router</div>
           </div>
-          <div className='bottom-project1'>
-          <div>Live</div><a id='live' target='_blank' href='https://spacebysihyeon.netlify.app/'>https://spacebysihyeon.netlify.app/</a>
-          <a></a>
-          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'>https://github.com/wprkftlgus/portpolioMain</a>
-          </div>
           </div>
           </div>
 
           <div className='slide'>
+          <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
+            <div className='picture-project4'>{hover && (
+              <div className='liveAndGit-button'>
+              <a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>
+              <div className='live-button'>Live</div>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'><div className='git-button'>Git</div></a>
+              </a>
+              </div>)}</div>
+          </div>
           <div className='title-project4'>SeanFlix</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>Netflix-Clone website</div>
@@ -451,15 +478,19 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-Express'>• Express</div>
             <div className='css-Router'>• Router</div>
           </div>
-          <div className='bottom-project1'>
-          <div>Live</div><a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>https://netflisclonebysihyeon.netlify.app/</a>
-          <a></a>
-          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
-          </div>
           </div>
           </div>
 
           <div className='slide'>
+          <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
+            <div className='picture-project5'>{hover && (
+              <div className='liveAndGit-button'>
+              <a id='live' target='_blank' href='https://sean-calculator.netlify.app/'>
+              <div className='live-button'>Live</div>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Calculator'><div className='git-button'>Git</div></a>
+              </a>
+              </div>)}</div>
+          </div>
           <div className='title-project4'>Calculator</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>calculator working</div>
@@ -471,11 +502,6 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
             <div className='css-MongoDB'>• MongoDB</div>
             <div className='css-Express'>• Express</div>
             <div className='css-Router'>• Router</div>
-          </div>
-          <div className='bottom-project1'>
-          <div>Live</div><a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>https://netflisclonebysihyeon.netlify.app/</a>
-          <a></a>
-          <div>Git:</div><a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'>https://github.com/wprkftlgus/Netflix</a>
           </div>
           </div>
           </div>
