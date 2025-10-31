@@ -66,7 +66,12 @@
   position: fixed;
   left: 80%;
   top: 2%;
-  background-color: white;
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.about-hide {
+  display: none;
 }
 .about-sentence-group {
   position: absolute;
@@ -890,7 +895,7 @@
   left: 40vw;
   z-index: 2;
   max-width: 50vw;
-  animation: bottomWide 2s ease forwards;
+  /* animation: bottomWide 2s ease forwards; */
 }
 .popup-nameAndImg-github {
   display: flex;

@@ -139,7 +139,7 @@ function Orbit({ speed, radius, children }) {
 
 function App() {
   const [position, setPosition] = useState({x:0, y:0});
-  
+  const [fold, setFold] = useState(false);
   const [focus, setFocus] = useState(null);
   const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
@@ -216,9 +216,9 @@ function App() {
       {!isLoaded ? (<div></div>) : (
         <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
       )}
-      {focus === 'earth' && (<div className='about-fold'>Fold</div>)}
+      {focus === 'earth' && (<div onClick={() => setFold(prev =>!prev)} className='about-fold'>-Fold</div>)}
       {focus === 'earth' && (
-        <div className='about-sentence-group'>
+        <div className={fold ? 'about-sentence-group' : 'about-hide'}>
         
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
