@@ -40,6 +40,7 @@
   position: absolute;
   z-index: 1;
   padding-left: 20px;
+  padding-top: 20px;
   cursor: pointer;
 }
 .me {
@@ -63,12 +64,20 @@
   animation: hand 2s ease infinite;
 }
 .about-fold {
+  background-image: url('../public/alien.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
   position: fixed;
   left: 80%;
   top: 2%;
   z-index: 2;
-  background-color: rgb(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: 0.3s;
+}
+.about-fold:hover {
+  filter: invert(1);
 }
 .about-hide {
   display: none;
@@ -79,7 +88,7 @@
   left: 10%;
   width: 70vw;
   font-size: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.88);
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(4px);
@@ -143,7 +152,7 @@
 .about-title2-beyond {
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
   animation: FadeIn 2s forwards;
 }
 .about-beyond-holder {
@@ -469,7 +478,7 @@
   align-items: center;
   margin: 0 auto;
   max-width: 100%;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .about-line-experience {
   height: 80rem;
@@ -501,7 +510,7 @@
   margin-bottom: 0.5rem;
 }
 .about-title-experience {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: rgb(252, 252, 252, 0.9);
   margin-bottom: 1rem;
 }
@@ -600,14 +609,24 @@
   height: 100%;
   background-color: rgba(37, 37, 37, 0.5);
 }
-.title-project1 {
+.title-project {
+  text-align: center;
   font-size: 40px;
   font-weight: 700;
+  animation: colorchange 10s ease infinite;
+  margin-bottom: 0.5rem;
+}
+.rightsection-project1 {
+  margin-bottom: 2rem;
+}
+.text-project1 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .holder-picture-project {
   position: relative;
-  margin: 0 auto;
-  width: 63rem;
+  
+  width: 63.7rem;
   height: 30rem;
   transition: 0.2s;
 }
@@ -617,11 +636,13 @@
   inset: 0;
   z-index: 2;
   transition: 0.5s;
+  
 }
 .holder-picture-project:hover::before {
   background: rgba(0, 0, 0, 0.5);
 }
 .liveAndGit-button {
+  display: flex;
   position: relative;
   top: 50%;
   left: 30%;
@@ -642,26 +663,30 @@
   background: linear-gradient(135deg, #9c4de2, #5c1fd8);
   border: 1px solid rgb(255, 255, 255);
 }
-.git-button {
-  background: linear-gradient(135deg, #8e2de2, #4a00e0);
-  margin: 0 auto;
-  background-image: url('../public/github.png');
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: invert(1);
+.holder-git-button {
+  background:rgb(190, 190, 190);
   display: inline-block;
   position: relative;
-  left: 20%;
-  font-size: 1.5rem;
-  padding: 0.5rem 2.2rem;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  cursor: pointer;
+  left: 80%;
+  top: 24%;
   z-index: 2;
   transition: 0.3s;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 0.5rem 2.5rem;
+}
+.holder-git-button:hover {
+  background:rgb(214, 214, 214);
+  border: 1px solid rgb(255, 255, 255);
+}
+.git-button {
+  
+  background-image: url('../public/github.png');
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .picture-project1 {
   background-image: url('../public/loopmarket-1.png');
@@ -679,68 +704,44 @@
   width: 100%;
   height: 100%;
 }
-.css-Full-Stack {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color: red;
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
+.picture-project3 {
+  background-image: url('../public/recipe.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
-.css-React {
-  font-size: 15px;
-  background-color: rgb(124, 124, 124);
-  color: rgb(0, 0, 255);
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
+.picture-project4 {
+  background-image: url('../public/netflix.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
-.css-HTML {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color:bisque;
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
+.picture-project5 {
+  background-image: url('../public/calculator.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
-.css-CSS {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color:blueviolet;
-  border-radius: 20px;
-  padding: 5px;
+.css-skill {
+  font-size: 16px;
+  background-color: rgb(70, 68, 57);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 4px 12px;
   cursor: context-menu;
-  font-weight: 700;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
 }
-.css-MongoDB {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color:chartreuse;
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
-}
-.css-Express {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color:hotpink;
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
-}
-.css-Router {
-  font-size: 15px;
-  background-color: rgb(71, 71, 71);
-  color:aqua;
-  border-radius: 20px;
-  padding: 5px;
-  cursor: context-menu;
-  font-weight: 700;
+.css-skill:hover {
+  border: 1px solid rgb(148, 126, 0);
+  background-color: rgb(70, 69, 35);
+  transform: scale(1.1);
 }
 #live {
   color: white;
@@ -772,6 +773,8 @@
 }
 .holder-project-skills {
   display: flex;
+  margin: 0 auto;
+  max-width: 43rem;
   gap: 20px;
 }
 .holder-contact {
@@ -878,6 +881,11 @@
 .Top-tag0:hover, .Top-tag1:hover, .Top-tag2:hover, .Top-tag3:hover {
   color: rebeccapurple;
 }
+.copyRight {
+  position: absolute;
+  top: 80%;
+  color: rgb(255, 255, 255, 0.4);
+}
 .holder-bottom {
   text-align: center;
   align-items: center;
@@ -887,25 +895,32 @@
   z-index: 100;
 }
 .bottom {
-  background-color: rgb(70, 70, 70);
-  border: 1px solid rgb(126, 126, 126);
+  background-color: rgb(70, 70, 70, 0.5);
+  border: 1px solid rgb(126, 126, 126, 0.8);
   border-radius: 50px;
   margin: 0 auto;
   top: 90vh;
   left: 40vw;
   z-index: 2;
-  max-width: 50vw;
-  /* animation: bottomWide 2s ease forwards; */
+  max-width: 30vw;
+  animation: FadeIn 2s forwards;
+  transition: 0.2s;
+}
+.bottom:hover {
+  background-color: rgb(70, 70, 70, 0.3);
 }
 .popup-nameAndImg-github {
   display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
   align-items: center;
   text-align: center;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 60%;
 }
 .popup-name {
   display: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: black;
   background-color: white;
@@ -913,10 +928,9 @@
   border: 1px solid black;
   border-radius: 50px;
   position: absolute;
-  bottom: 60px;
-}
-.popup-nameAndImg-github:hover .popup-name {
-  display: inline-block;
+  right: -1rem;
+  bottom: 40px;
+  animation: FadeInFromBottom 0.2s forwards;
 }
 .bottomgit {
   margin: 0 auto;
@@ -927,6 +941,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: invert(1);
+  transition: 0.2s;
+}
+.bottomgit:hover {
+  transform: scale(1.2) translateY(-0.6rem);
+}
+.bottomgit:hover .popup-name {
+  display: inline-block;
 }
 .Body-title1 {
   font-size: 40px;

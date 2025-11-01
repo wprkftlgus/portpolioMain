@@ -90,7 +90,7 @@ return(
     </Orbit>
     <Orbit speed={0.2} radius={10}>
     <primitive ref={earthRef} object={earth.scene} scale={2}  />
-     <MoonOrbit speed={0.5} radius={0.001} focus={focus}>
+     <MoonOrbit speed={0.25} radius={0.001} focus={focus}>
       <primitive ref={moonRef} object={moon.scene} scale={0.5} position={[4, 0, 1]}/>
      </MoonOrbit>
     </Orbit>
@@ -139,7 +139,7 @@ function Orbit({ speed, radius, children }) {
 
 function App() {
   const [position, setPosition] = useState({x:0, y:0});
-  const [fold, setFold] = useState(false);
+  const [fold, setFold] = useState(true);
   const [focus, setFocus] = useState(null);
   const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
@@ -216,7 +216,7 @@ function App() {
       {!isLoaded ? (<div></div>) : (
         <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
       )}
-      {focus === 'earth' && (<div onClick={() => setFold(prev =>!prev)} className='about-fold'>-Fold</div>)}
+      {focus === 'earth' && (<div onClick={() => setFold(prev =>!prev)} className='about-fold'></div>)}
       {focus === 'earth' && (
         <div className={fold ? 'about-sentence-group' : 'about-hide'}>
         
@@ -386,22 +386,22 @@ Although my learning pace was irregular due to military service (1.5 years) and 
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>
               <div className='live-button'>Live</div>
-              <a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'><div className='git-button'>Git</div></a>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </a>
               </div>)}</div>
           </div>
           
-          <div className='title-project1'>Loop Market</div>
+          <div className='title-project'>Loop Market</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
           <div className='holder-project-skills'>
-            <div className='css-Full-Stack'>• Full-Stack</div>
-            <div className='css-React'>• React</div>
-            <div className='css-HTML'>• HTML</div>
-            <div className='css-CSS'>• CSS</div>
-            <div className='css-MongoDB'>• MongoDB</div>
-            <div className='css-Express'>• Express</div>
-            <div className='css-Router'>• Router</div>
+            <div className='css-skill'>Full-Stack</div>
+            <div className='css-skill'>React</div>
+            <div className='css-skill'>HTML</div>
+            <div className='css-skill'>CSS</div>
+            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>Express</div>
+            <div className='css-skill'>Router</div>
           </div>
           </div>
           </div>
@@ -412,21 +412,21 @@ Although my learning pace was irregular due to military service (1.5 years) and 
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://recipeapibysihyeon.netlify.app/'>
               <div className='live-button'>Live</div>
-              <a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'><div className='git-button'>Git</div></a>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </a>
               </div>)}</div>
           </div>
-          <div className='title-project2'>MyRecipe</div>
+          <div className='title-project'>MyRecipe</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
           <div className='holder-project-skills'>
-            <div className='css-Full-Stack'>• Full-Stack</div>
-            <div className='css-React'>• React</div>
-            <div className='css-HTML'>• HTML</div>
-            <div className='css-CSS'>• CSS</div>
-            <div className='css-MongoDB'>• MongoDB</div>
-            <div className='css-Express'>• Express</div>
-            <div className='css-Router'>• Router</div>
+            <div className='css-skill'>Full-Stack</div>
+            <div className='css-skill'>React</div>
+            <div className='css-skill'>HTML</div>
+            <div className='css-skill'>CSS</div>
+            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>Express</div>
+            <div className='css-skill'>Router</div>
           </div>
           </div>
           </div>
@@ -437,21 +437,21 @@ Although my learning pace was irregular due to military service (1.5 years) and 
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://spacebysihyeon.netlify.app/'>
               <div className='live-button'>Live</div>
-              <a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'><div className='git-button'>Git</div></a>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </a>
               </div>)}</div>
           </div>
-          <div className='title-project3'>The Space</div>
+          <div className='title-project'>The Space</div>
           <div className='rightsection-project1'>
           <div className='text-project1'>My main portfolio website that got inspired from movie 'Interstellar'. User can watch all of my work here!</div>
           <div className='holder-project-skills'>
-            <div className='css-Full-Stack'>• Full-Stack</div>
-            <div className='css-React'>• React</div>
-            <div className='css-HTML'>• HTML</div>
-            <div className='css-CSS'>• CSS</div>
-            <div className='css-MongoDB'>• MongoDB</div>
-            <div className='css-Express'>• Express</div>
-            <div className='css-Router'>• Router</div>
+            <div className='css-skill'>Full-Stack</div>
+            <div className='css-skill'>React</div>
+            <div className='css-skill'>HTML</div>
+            <div className='css-skill'>CSS</div>
+            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>Express</div>
+            <div className='css-skill'>Router</div>
           </div>
           </div>
           </div>
@@ -462,21 +462,21 @@ Although my learning pace was irregular due to military service (1.5 years) and 
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>
               <div className='live-button'>Live</div>
-              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'><div className='git-button'>Git</div></a>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </a>
               </div>)}</div>
           </div>
-          <div className='title-project4'>SeanFlix</div>
+          <div className='title-project'>SeanFlix</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Netflix-Clone website</div>
+          <div className='text-project1'>Built a Netflix clone using React and styled-components, replicating the original platform’s design and interactivity. Features include responsive layout, video playback, animated sections, and collapsible FAQ interactions.</div>
           <div className='holder-project-skills'>
-            <div className='css-Full-Stack'>• Full-Stack</div>
-            <div className='css-React'>• React</div>
-            <div className='css-HTML'>• HTML</div>
-            <div className='css-CSS'>• CSS</div>
-            <div className='css-MongoDB'>• MongoDB</div>
-            <div className='css-Express'>• Express</div>
-            <div className='css-Router'>• Router</div>
+            <div className='css-skill'>Full-Stack</div>
+            <div className='css-skill'>React</div>
+            <div className='css-skill'>HTML</div>
+            <div className='css-skill'>CSS</div>
+            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>Express</div>
+            <div className='css-skill'>Router</div>
           </div>
           </div>
           </div>
@@ -487,21 +487,21 @@ Although my learning pace was irregular due to military service (1.5 years) and 
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://sean-calculator.netlify.app/'>
               <div className='live-button'>Live</div>
-              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Calculator'><div className='git-button'>Git</div></a>
+              <a id='git' target='_blank' href='https://github.com/wprkftlgus/Calculator'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </a>
               </div>)}</div>
           </div>
-          <div className='title-project4'>Calculator</div>
+          <div className='title-project'>Calculator</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>calculator working</div>
+          <div className='text-project1'>Built a functional calculator using React and JavaScript, featuring real-time input display, operator validation, and error handling for invalid expressions.</div>
           <div className='holder-project-skills'>
-            <div className='css-Full-Stack'>• Full-Stack</div>
-            <div className='css-React'>• React</div>
-            <div className='css-HTML'>• HTML</div>
-            <div className='css-CSS'>• CSS</div>
-            <div className='css-MongoDB'>• MongoDB</div>
-            <div className='css-Express'>• Express</div>
-            <div className='css-Router'>• Router</div>
+            <div className='css-skill'>Full-Stack</div>
+            <div className='css-skill'>React</div>
+            <div className='css-skill'>HTML</div>
+            <div className='css-skill'>CSS</div>
+            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>Express</div>
+            <div className='css-skill'>Router</div>
           </div>
           </div>
           </div>
@@ -551,11 +551,12 @@ Although my learning pace was irregular due to military service (1.5 years) and 
       </div>
       {!isLoaded ? (<div></div>) : (
       <div className='holder-bottom'>
+      <div className='copyRight'>© 2025 Sihyeon. All rights reserved</div>
       <div className='bottom'>
         <div className='popup-nameAndImg-github'>
-        <div className='popup-name'>Github</div>
         <a href='https://github.com/wprkftlgus' target='_blank'>
-        <div className='bottomgit'></div></a>
+        <div className='bottomgit'><div className='popup-name'>Github</div></div></a>
+        
         </div>
       </div>
       </div>
