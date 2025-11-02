@@ -247,20 +247,20 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>01</div>
         <Animation><div className='about-progressBar'></div></Animation>
-        <div className='about-subtitle1-beyond'>Non-stop Learning</div>
-        <div className='about-content1-beyond'>As a developer, it takes continuous effort and practice to learn new technologies and stay up to date with the latest trends.</div>
+        <div className='about-subtitle-beyond'>Non-stop Learning</div>
+        <div className='about-content-beyond'>As a developer, it takes continuous effort and practice to learn new technologies and stay up to date with the latest trends.</div>
         </div>
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>02</div>
         <Animation><div className='about-progressBar'></div></Animation>
-        <div className='about-subtitle2-beyond'>Opened-minded</div>
-        <div className='about-content2-beyond'>A developer should have an open mindset — always ready to think differently and explore new directions beyond the conventional path.</div>
+        <div className='about-subtitle-beyond'>Opened-minded</div>
+        <div className='about-content-beyond'>A developer should have an open mindset — always ready to think differently and explore new directions beyond the conventional path.</div>
         </div>
         <div className='about-beyond-component-flex'>
         <div className='about-beyond-subtitleNumber'>03</div>
         <Animation><div className='about-progressBar'></div></Animation>
-        <div className='about-subtitle3-beyond'>Communicative</div>
-        <div className='about-content3-beyond'>Just as developers interact with computers through code, it’s equally important to communicate and exchange ideas with people. Strong communication skills are essential to put all of this into practice.</div>
+        <div className='about-subtitle-beyond'>Communicative</div>
+        <div className='about-content-beyond'>Just as developers interact with computers through code, it’s equally important to communicate and exchange ideas with people. Strong communication skills are essential to put all of this into practice.</div>
         </div>
         </div>
         </AnimationChildren>
@@ -299,6 +299,7 @@ I'm eager to bring fresh ideas and technical skills to every project I take on.<
           <AnimationClone><div className='holder-icon'><div className='render'></div><div className='title-icon'>Render</div></div></AnimationClone>
           <AnimationClone><div className='holder-icon'><div className='restapi'></div><div className='title-icon'>RestAPI</div></div></AnimationClone>
           <AnimationClone><div className='holder-icon'><div className='router'></div><div className='title-icon'>Router</div></div></AnimationClone>
+          <AnimationClone><div className='holder-icon'><div className='jwt'></div><div className='title-icon'>JWT</div></div></AnimationClone>
         </div>
         </AnimationChildren>
         </div>
@@ -393,15 +394,24 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           
           <div className='title-project'>Loop Market</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Second-Hand market that people can make their own account, login, upload the post</div>
-          <div className='holder-project-skills'>
+          <div className='text-project'>Developed a second-hand marketplace application that allows users to create accounts, log in, upload their own listings, search for items, and interact through comments.</div>
+          <div className='holder-project-skills-project1'>
+            <div className='flex-project-skills-project1'>
             <div className='css-skill'>Full-Stack</div>
             <div className='css-skill'>React</div>
             <div className='css-skill'>HTML</div>
             <div className='css-skill'>CSS</div>
+            <div className='css-skill'>JAVA</div>
+            <div className='css-skill'>JWT</div>
+            </div>
+            <div className='flex-project-skills-project1'>
             <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>NodeJS</div>
             <div className='css-skill'>Express</div>
+            <div className='css-skill'>Render</div>
+            <div className='css-skill'>RestAPI</div>
             <div className='css-skill'>Router</div>
+            </div>
           </div>
           </div>
           </div>
@@ -418,13 +428,13 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           </div>
           <div className='title-project'>MyRecipe</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
-          <div className='holder-project-skills'>
-            <div className='css-skill'>Full-Stack</div>
+          <div className='text-project'>User can search the recipe of the food what they want, while showing all instructions and Youtube video as well!</div>
+          <div className='holder-project-skills-project2'>
             <div className='css-skill'>React</div>
             <div className='css-skill'>HTML</div>
             <div className='css-skill'>CSS</div>
-            <div className='css-skill'>MongoDB</div>
+            <div className='css-skill'>JAVA</div>
+            <div className='css-skill'>RestAPI</div>
             <div className='css-skill'>Express</div>
             <div className='css-skill'>Router</div>
           </div>
@@ -443,15 +453,14 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           </div>
           <div className='title-project'>The Space</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>My main portfolio website that got inspired from movie 'Interstellar'. User can watch all of my work here!</div>
-          <div className='holder-project-skills'>
-            <div className='css-skill'>Full-Stack</div>
+          <div className='text-project'>My main portfolio website inspired by Interstellar.<br></br> The homepage visualizes a solar system built with Three.js, and when users click on the About, Project, or Contact tabs, the camera dynamically zooms into different planets, revealing detailed information for each section.</div>
+          <div className='holder-project-skills-project3'>
+            
             <div className='css-skill'>React</div>
             <div className='css-skill'>HTML</div>
             <div className='css-skill'>CSS</div>
-            <div className='css-skill'>MongoDB</div>
-            <div className='css-skill'>Express</div>
-            <div className='css-skill'>Router</div>
+            <div className='css-skill'>JAVA</div>
+            <div className='css-skill'>Three.js</div>
           </div>
           </div>
           </div>
@@ -468,15 +477,12 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           </div>
           <div className='title-project'>SeanFlix</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Built a Netflix clone using React and styled-components, replicating the original platform’s design and interactivity. Features include responsive layout, video playback, animated sections, and collapsible FAQ interactions.</div>
+          <div className='text-project'>Built a Netflix clone using React and styled-components, replicating the original platform’s design and interactivity. Features include responsive layout, video playback, animated sections, and collapsible FAQ interactions.</div>
           <div className='holder-project-skills'>
-            <div className='css-skill'>Full-Stack</div>
             <div className='css-skill'>React</div>
             <div className='css-skill'>HTML</div>
             <div className='css-skill'>CSS</div>
-            <div className='css-skill'>MongoDB</div>
-            <div className='css-skill'>Express</div>
-            <div className='css-skill'>Router</div>
+            <div className='css-skill'>JAVA</div>
           </div>
           </div>
           </div>
@@ -493,15 +499,12 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           </div>
           <div className='title-project'>Calculator</div>
           <div className='rightsection-project1'>
-          <div className='text-project1'>Built a functional calculator using React and JavaScript, featuring real-time input display, operator validation, and error handling for invalid expressions.</div>
+          <div className='text-project'>Built a functional calculator using React and JavaScript, featuring real-time input display, operator validation, and error handling for invalid expressions.</div>
           <div className='holder-project-skills'>
-            <div className='css-skill'>Full-Stack</div>
             <div className='css-skill'>React</div>
             <div className='css-skill'>HTML</div>
             <div className='css-skill'>CSS</div>
-            <div className='css-skill'>MongoDB</div>
-            <div className='css-skill'>Express</div>
-            <div className='css-skill'>Router</div>
+            <div className='css-skill'>JAVA</div>
           </div>
           </div>
           </div>
@@ -556,7 +559,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
         <div className='popup-nameAndImg-github'>
         <a href='https://github.com/wprkftlgus' target='_blank'>
         <div className='bottomgit'><div className='popup-name'>Github</div></div></a>
-        
+        <a href='https://www.linkedin.com/in/sihyeon-jegal-a4bbaa360' target='_blank'>
+        <div className='bottomLinkedin'><div className='popup-name-linkedin'>Linkedin</div></div></a>
         </div>
       </div>
       </div>

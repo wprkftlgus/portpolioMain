@@ -180,24 +180,10 @@
   background: linear-gradient(135deg, #8e2de2, #4a00e0);
   animation: bar 6s ease forwards;
 }
-.about-subtitle1-beyond {
+.about-subtitle-beyond {
   font-size: 1.8rem;
 }
-.about-content1-beyond {
-  font-size: 1.2rem;
-  max-width: 350px;
-}
-.about-subtitle2-beyond {
-  font-size: 1.8rem;
-}
-.about-content2-beyond {
-  font-size: 1.2rem;
-  max-width: 350px;
-}
-.about-subtitle3-beyond {
-  font-size: 1.8rem;
-}
-.about-content3-beyond {
+.about-content-beyond {
   font-size: 1.2rem;
   max-width: 350px;
 }
@@ -310,6 +296,9 @@
 }
 .holder-backend-icons .holder-icon:nth-child(6) {
   animation-delay: 1.8s;
+}
+.holder-backend-icons .holder-icon:nth-child(7) {
+  animation-delay: 2.0s;
 }
 .holder-techAndTools-icons .holder-icon:nth-child(1) {
   animation-delay: 0s;
@@ -429,8 +418,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.jwt {
+  margin: 0 auto;
+  background-image: url('../public/jwt.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .about-holder-techtools {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 .vs {
   margin: 0 auto;
@@ -593,11 +590,12 @@
   transition: 0.1s;
 }
 .button-previous:hover {
-  filter: invert(0.5);
+  filter: invert(0.4);
 }
 .slides-wrapper {
   width: 65rem;
   overflow: hidden;
+  background-color: rgba(37, 37, 37, 0.5);
 }
 .slides {
   display: flex;
@@ -607,7 +605,6 @@
 .slide {
   min-width: 64rem;
   height: 100%;
-  background-color: rgba(37, 37, 37, 0.5);
 }
 .title-project {
   text-align: center;
@@ -617,11 +614,14 @@
   margin-bottom: 0.5rem;
 }
 .rightsection-project1 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
-.text-project1 {
+.text-project {
   text-align: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  min-height: 3.3rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 .holder-picture-project {
   position: relative;
@@ -639,7 +639,7 @@
   
 }
 .holder-picture-project:hover::before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 .liveAndGit-button {
   display: flex;
@@ -769,12 +769,39 @@
   transition: 0.1s;
 }
 .button-next:hover {
-  filter: invert(0.5);
+  filter: invert(0.4);
+}
+.holder-project-skills-project1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+.flex-project-skills-project1 {
+  display: flex;
+  margin: 0 auto;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.holder-project-skills-project2 {
+  display: flex;
+  margin: 0 auto;
+  max-width: 37rem;
+  height: 2rem;
+  gap: 20px;
+}
+.holder-project-skills-project3 {
+  display: flex;
+  margin: 0 auto;
+  max-width: 25rem;
+  height: 2rem;
+  gap: 20px;
 }
 .holder-project-skills {
   display: flex;
   margin: 0 auto;
-  max-width: 43rem;
+  max-width: 20rem;
+  height: 2rem;
   gap: 20px;
 }
 .holder-contact {
@@ -932,6 +959,20 @@
   bottom: 40px;
   animation: FadeInFromBottom 0.2s forwards;
 }
+.popup-name-linkedin {
+  display: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: absolute;
+  right: -1.3rem;
+  bottom: 40px;
+  animation: FadeInFromBottom 0.2s forwards;
+}
 .bottomgit {
   margin: 0 auto;
   background-image: url('../public/github.png');
@@ -947,6 +988,23 @@
   transform: scale(1.2) translateY(-0.6rem);
 }
 .bottomgit:hover .popup-name {
+  display: inline-block;
+}
+.bottomLinkedin {
+  margin: 0 auto;
+  background-image: url('../public/linkedin.png');
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(1);
+  transition: 0.2s;
+}
+.bottomLinkedin:hover {
+  transform: scale(1.2) translateY(-0.6rem);
+}
+.bottomLinkedin:hover .popup-name-linkedin {
   display: inline-block;
 }
 .Body-title1 {
@@ -977,7 +1035,7 @@
   width: 100%;
   z-index: 0;
   /* display: none;  */
- 
+ display: none; 
 }
 .bugAndLoading {
   display: flex;
@@ -1155,187 +1213,243 @@
         transform: rotate(720deg) scale(1);
     }
 }
-@media (max-width: 1440px) {
-  .name-contact {
-    font-size: 45px;
+@media (max-width: 1700px) {
+  .about-sentence-group {
+    width: 65vw;
+    left: 15%;
   }
-  .holder-contact {
-    top: 8%;
-    left: 20%;
-  }
-  .email {
-    width: 20vw;
-  }
-  .title {
-    width: 20vw;
-  }
-  .content {
-    height: 35vh;
-  }
-}
-@media (max-width: 1130px) {
-  .me {
-    width: 50px;
-    height: 50px;
-  }
-  .hand {
-    width: 30px;
-    height: 30px;
-    right: 40px;
-  }
-  .name-contact {
-    font-size: 35px;
-  }
-  .holder-contact {
-    top: 8%;
-    left: 10%;
-  }
-  .email {
-    width: 20vw;
-    font-size: 20px;
-  }
-  .title {
-    width: 20vw;
-    font-size: 20px;
-  }
-  .content {
-    height: 35vh;
-    font-size: 20px;
-  }
-}
-@media (max-width: 905px) {
-  .about-title {
-    font-size: 20px;
-  }
-  .about-sentence {
+  .Top-tag0 {
     font-size: 15px;
   }
-  .Top-tag-group {
-    font-size: 2px;
+  .Top-tag1 {
+    font-size: 35px;
   }
-  .Top-tag0 {
-    font-size: 25px !important;
+  .Top-tag2 {
+    font-size: 35px;
   }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 40px !important;
-  }
-  .skills-title {
-    font-size: 18px !important;
-  }
-
-
-  .name-contact {
-    font-size: 30px;
-  }
-  .holder-contact {
-    top: 8%;
-    left: 10%;
-  }
-  .email {
-    width: 20vw;
-    font-size: 20px;
-    margin: 2px;
-  }
-  .title {
-    width: 20vw;
-    font-size: 20px;
-    margin: 2px;
-  }
-  .content {
-    height: 35vh;
-    font-size: 20px;
-    margin: 2px;
+  .Top-tag3 {
+    font-size: 35px;
   }
 }
-@media (max-width: 680px) {
-   .about-title {
-    font-size: 15px!important;
-  }
-  .about-sentence {
-    font-size: 10px;
-  }
-  .Top-tag-group {
-    font-size: 2px;
+@media (max-width: 1300px) {
+  .about-sentence-group {
+    width: 60vw;
+    left: 15%;
   }
   .Top-tag0 {
-    font-size: 20px !important;
+    font-size: 10px;
   }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 30px !important;
+  .Top-tag1 {
+    font-size: 25px;
   }
-  .bottom-img-github {
-    width: 35px;
-    cursor: pointer;
+  .Top-tag2 {
+    font-size: 25px;
   }
-  .skills-img {
+  .Top-tag3 {
+    font-size: 25px;
+  }
+  .about-fold {
     width: 30px;
+    height: 30px;
+    left: 75%;
+    top: 3%;
   }
-  .Logo {
-    width: 50px;
+  .about-title {
+    font-size: 1.3rem;
   }
-  .skills-group {
-    left: 55% !important;
+  .about-title-myname {
+    font-size: 2rem;
   }
   .me {
+    left: 20rem;
+    top: 12rem;
+    width: 60px;
+    height: 60px;
+  }
+  .hand {
+    right: 50px;
+    width: 25px;
+    height: 25px;
+  }
+  .about-subtitle {
+    font-size: 0.8rem;
+  }
+  .line {
+    height: 2px;
+  }
+  .about-title {
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+  .about-title-line1 {
+    font-size: 2rem;
+  }
+  .about-title-beyond {
+    font-size: 2rem;
+    min-width: 14rem;
+  }
+  .about-title-line3 {
+    font-size: 2rem;
+  }
+  .about-title2-beyond {
+    font-size: 0.8rem;
+    margin-bottom: 5rem;
+  }
+  .about-beyond-holder {
+    margin-bottom: 10rem;
+  }
+  .about-beyond-subtitleNumber {
+    font-size: 1.5rem;
+  }
+  .about-progressBar {
+    height: 13px;
+  }
+  .about-subtitle-beyond {
+    font-size: 1.4rem;
+  }
+  .about-content-beyond {
+    font-size: 1rem;
+  }
+  .about-title-line2 {
+    font-size: 2rem;
+    min-width: 12rem;
+  }
+  .about-title-techstacks {
+    font-size: 1.6rem;
+  }
+  .holder-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .title-icon {
+    font-size: 0.8rem;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 10rem;
+  }
+  .holder-frontend-icons {
+    gap: 15px;
+    width: 197px;
+    grid-template-columns: 80px 80px;
+    grid-template-rows: 80px 80px;
+  }
+  .holder-backend-icons {
+    gap: 15px;
+    width: 262px;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 8rem;
+  }
+  .about-holder-techtools {
+    margin-top: 10rem;
+  }
+  .holder-techAndTools-icons {
+    gap: 15px;
+    width: 283px;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px;
+  }
+  .html {
     width: 35px;
     height: 35px;
   }
-  .hand {
+  .css {
+    width: 35px;
+    height: 35px;
+  }
+  .java {
+    width: 35px;
+    height: 35px;
+  }
+  .react {
+    width: 35px;
+    height: 35px;
+  }
+  .node {
+    width: 35px;
+    height: 35px;
+  }
+  .express {
+    width: 35px;
+    height: 35px;
+  }
+  .mongodb {
+    width: 35px;
+    height: 35px;
+  }
+  .render {
+    width: 35px;
+    height: 35px;
+  }
+  .restapi {
+    width: 35px;
+    height: 35px;
+  }
+  .router {
+    width: 35px;
+    height: 35px;
+  }
+  .jwt {
+    width: 35px;
+    height: 35px;
+  }
+  .vs {
+    width: 35px;
+    height: 35px;
+  }
+  .git {
+    width: 35px;
+    height: 35px;
+  }
+  .github {
+    width: 35px;
+    height: 35px;
+  }
+  .netlify {
+    width: 35px;
+    height: 35px;
+  }
+  .bootstrap {
+    width: 35px;
+    height: 35px;
+  }
+  .about-container-experience {
+    margin-bottom: 3rem;
+  }
+  .about-line-experience {
+    width: 0.2rem;
+  }
+  .about-title-experience {
+    font-size: 1.3rem;
+  }
+  .about-date-experience {
+    font-size: 1.0rem;
+  }
+  .about-subtitle-experience {
+    font-size: 1.0rem;
+  }
+  .onair {
+    min-width: 60px;
+    height: 60px;
+  }
+  .checked {
+    min-width: 60px;
+    height: 60px;
+  }
+  .bottom {
+    max-width: 25vw;
+  }
+  .bottomgit {
     width: 20px;
     height: 20px;
-    right: 30px;
   }
-  .name-contact {
-    font-size: 25px;
+  .bottomLinkedin {
+    width: 20px;
+    height: 20px;
   }
-  .holder-contact {
-    top: 8%;
-    left: 10%;
-  }
-  .email {
-    width: 20vw;
-    font-size: 15px;
-  }
-  .title {
-    width: 20vw;
-    font-size: 15px;
-  }
-  .content {
-    height: 35vh;
-    font-size: 15px;
-  }
-}
-@media(max-width: 440px){
-  .Top-tag0 {
-    font-size: 10px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 20px !important;
-  }
-  .skills-group {
-    left: 57% !important;
-  }
-  .about-title {
-    font-size: 12px !important;
-  }
-  .about-sentence {
-    font-size: 7px;
-  }
-  .canvas {
-    width: 10%;
-  }
-  .skills-title {
-  font-size: 15px !important;
-}
-}
-@media (max-width: 340px) {
-   .Top-tag0 {
-    font-size: 7px !important;
-  }
-  .Top-tag1, .Top-tag2, .Top-tag3 {
-    font-size: 17px !important;
-  }
-  .loading {
-    font-size: 40px;
+  .copyRight {
+    top: 100%;
   }
 }
