@@ -1035,7 +1035,7 @@
   width: 100%;
   z-index: 0;
   /* display: none;  */
- display: none; 
+ 
 }
 .bugAndLoading {
   display: flex;
@@ -1449,7 +1449,47 @@
     width: 20px;
     height: 20px;
   }
+  .popup-name {
+    font-size: 10px;
+    padding: 5px;
+    right: -12px;
+    bottom: 25px;
+  }
+  .popup-name-linkedin {
+    font-size: 10px;
+    padding: 5px;
+    right: -15px;
+    bottom: 25px;
+  }
   .copyRight {
     top: 100%;
   }
+}
+@media (max-width: 1100px) {
+  .about-beyond-flex {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .about-subtitle-experience {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 900px) {
+  .about-techstacks-flex {
+    flex-direction: column;
+  }
+  .holder-frontend-icons {
+    width: 186px;
+  }
+  .about-holder-frontend {
+    margin-bottom: 5rem;
+  }
+  .holder-backend-icons {
+    width: 279px;
+  }
+}
+@media (max-width: 850px) {
+  
 }
