@@ -144,6 +144,7 @@ function App() {
   const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
   const [hover, setHover] = useState(false);
+  const [burger, setBurger] = useState(false);
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) %slides.length);
   }
@@ -210,7 +211,7 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <div className={!burger ? "App" : "App-opened"}>
      
      <div className='Section1'>  
       {!isLoaded ? (<div></div>) : (
@@ -530,7 +531,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
         </div>
         </motion.div>
       )}
-      <div className='Top-tag-group'>
+      {isLoaded && (<div onClick={() => {setBurger((prev) => !prev)}} className={!burger ? "burger" : "burger-opened"}></div>)}
+      <div className={!burger ? "Top-tag-group" : "Top-tag-group-opened"}>
       {isLoaded && (
         <>
         <motion.div className='Top-tag0' initial={{ opacity:0, x: 0, y: 500}}
@@ -549,7 +551,9 @@ Although my learning pace was irregular due to military service (1.5 years) and 
       <motion.div className='Top-tag3' initial={{ opacity:0, x: 0, y: 500}}
       animate={{ opacity: 1, x: 0, y: 0}}
       transition={{duration: 1.8, delay: 0.6}} onClick={() => setFocus('moon') }
-      >Contact</motion.div></>)
+      >Contact</motion.div>
+      <div onClick={() => {setBurger((prev) => !prev)}} className={!burger ? "close" : "close-opened"}></div>
+      </>)
       }
       </div>
       {!isLoaded ? (<div></div>) : (

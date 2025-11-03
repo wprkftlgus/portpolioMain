@@ -8,7 +8,6 @@
 }
 
 .App {
-  
   background-color: #070707;
   color:  white;
   background-image: url('../public/space.jpg');
@@ -16,7 +15,15 @@
   background-size: cover;
   background-position: center;
 }
-
+.App-opened {
+  height: 120vh;
+  background-color: #070707;
+  color:  white;
+  background-image: url('../public/space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .Neon {
   background: white;
   width: 200px;
@@ -871,6 +878,19 @@
 .check:hover {
   filter: invert(0.9);
 }
+.burger {
+  display: none;
+  position: absolute;
+  background-image: url('../public/burger-bar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  right: 1rem;
+  filter: invert(1);
+  cursor: pointer;
+  z-index: 2;
+}
 .Top-tag-group{
   font-family: "Bungee Inline", sans-serif;
   text-align: right;
@@ -880,6 +900,13 @@
   z-index: 1;
   right: 2%;
   top: 10%;
+}
+.Top-tag-group-opened {
+  background: #1b1b1b;
+  font-family: "Bungee Inline", sans-serif;
+  padding-bottom: 1rem;
+  text-align: right;
+  padding-right: 1rem;
 }
 .Top-tag0{
   font-size: 20px;
@@ -904,6 +931,24 @@
   font-size: 50px;
   font-weight: bolder;
   cursor: pointer;
+}
+.close {
+  display: none;
+}
+.close-opened {
+  background-image: url('../public/close.png');
+  width: 30px;
+  height: 30px;
+  text-align: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(1);
+  cursor: pointer;
+  margin-left: 92vw;
+  margin-top: 1rem;
+}
+.close-opened:hover {
+  filter: invert(0.5);
 }
 .Top-tag0:hover, .Top-tag1:hover, .Top-tag2:hover, .Top-tag3:hover {
   color: rebeccapurple;
@@ -1491,5 +1536,13 @@
   }
 }
 @media (max-width: 850px) {
-  
+  .Top-tag-group {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .about-sentence-group {
+
+  }
 }
