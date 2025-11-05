@@ -139,7 +139,9 @@ function Orbit({ speed, radius, children }) {
 
 function App() {
   const [position, setPosition] = useState({x:0, y:0});
-  const [fold, setFold] = useState(true);
+  const [aboutfold, setAboutfold] = useState(true);
+  const [projectfold, setProjectfold] = useState(true);
+  const [contactfold, setContactfold] = useState(true);
   const [focus, setFocus] = useState(null);
   const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
@@ -217,9 +219,9 @@ function App() {
       {!isLoaded ? (<div></div>) : (
         <div className='div-logo'><img className='Logo' src='\icon.png' /></div>
       )}
-      {focus === 'earth' && (<div onClick={() => setFold(prev =>!prev)} className='about-fold'></div>)}
+      {focus === 'earth' && (<div onClick={() => setAboutfold(prev =>!prev)} className='about-fold'></div>)}
       {focus === 'earth' && (
-        <div className={fold ? 'about-sentence-group' : 'about-hide'}>
+        <div className={aboutfold ? 'about-sentence-group' : 'about-hide'}>
         
         <motion.div className='about-title' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 1.4, delay: 0.3}}>
@@ -372,10 +374,11 @@ Although my learning pace was irregular due to military service (1.5 years) and 
         </div>
       )}
       
+      {focus === 'mars' && (<div onClick={() => setProjectfold(prev =>!prev)} className='project-fold'></div>)}
       {focus === 'mars' && (
         <motion.div className='project-sentence' initial={{opacity: 0}}
         animate={{opacity:1}} transition={{duration: 0}}>
-        <div className='holder-projects'>
+        <div className={projectfold ? 'holder-projects' : 'about-hide'} >
           <div className='button-previous' onClick={() => {
             PrevSlide();
           }}></div>
@@ -517,10 +520,12 @@ Although my learning pace was irregular due to military service (1.5 years) and 
         </div>
         </motion.div>
       )}
+
+      {focus === 'moon' && (<div onClick={() => setContactfold(prev =>!prev)} className='contact-fold'></div>)}
       {focus === 'moon' && (
         <motion.div className='contact-sentence' initial={{opacity: 0}}
         animate={{opacity:10}} transition={{duration: 0}}>
-        <div className='holder-contact'>
+        <div className={contactfold ? 'holder-contact' : 'about-hide'}>
           <div className='name-contact'>Contact</div>
           <input placeholder='Your Email' className='email'></input>
           <input placeholder='Title' className='title'></input>

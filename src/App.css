@@ -86,6 +86,38 @@
 .about-fold:hover {
   filter: invert(1);
 }
+.project-fold {
+  background-image: url('../public/alien.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 80rem;
+  top: 4rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.project-fold:hover {
+  filter: invert(1);
+}
+.contact-fold{
+  background-image: url('../public/alien.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 68%;
+  top: 4rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-fold:hover{
+  filter: invert(1);
+}
 .about-hide {
   display: none;
 }
@@ -824,7 +856,8 @@
   position: absolute;
 }
 .name-contact {
-  font-size: 55px;
+  font-size: 50px;
+  font-weight: 600;
   padding: 10px;
 }
 .email {
@@ -974,7 +1007,7 @@
   top: 90vh;
   left: 40vw;
   z-index: 2;
-  max-width: 30vw;
+  max-width: 25vw;
   animation: FadeIn 2s forwards;
   transition: 0.2s;
 }
@@ -987,8 +1020,7 @@
   padding-right: 2rem;
   align-items: center;
   text-align: center;
-  flex-direction: row;
-  gap: 60%;
+  
 }
 .popup-name {
   display: none;
@@ -1276,6 +1308,41 @@
     font-size: 35px;
   }
 }
+@media (max-width: 1660px) {
+  .project-fold {
+    left: 76rem;
+  }
+  .holder-projects {
+    left: 10%;
+  }
+}
+@media (max-width: 1560px) {
+  .project-fold {
+    left: 63rem;
+  }
+  .holder-projects {
+    width: 63rem;
+  }
+  .holder-picture-project {
+    margin: 0 auto;
+    width: 53.3rem;
+    height: 26rem;
+  }
+  .slides-wrapper {
+    width: 67rem;
+  }
+  .slide {
+    min-width: 54rem;
+  }
+}
+@media (max-width: 1350px) {
+  .project-fold {
+    left: 58rem;
+  }
+  .holder-projects {
+    left: 5%;
+  }
+}
 @media (max-width: 1300px) {
   .about-sentence-group {
     width: 60vw;
@@ -1509,6 +1576,34 @@
   .copyRight {
     top: 100%;
   }
+
+  .holder-picture-project {
+    width: 40.3rem;
+    height: 20rem;
+  }
+
+  .name-contact {
+    font-size: 2.5rem;
+  }
+  .contact-fold {
+    width: 35px;
+    height: 35px;
+    top: 4.4rem;
+  }
+  .email {
+    font-size: 1.5rem;
+    width: 18vw;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .content {
+    font-size: 1.5rem;
+  }
+  .check {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (max-width: 1100px) {
   .about-beyond-flex {
@@ -1535,6 +1630,31 @@
     width: 279px;
   }
 }
+@media (max-width: 899px) {
+  .name-contact {
+    font-size: 2rem;
+  }
+  .contact-fold {
+    width: 30px;
+    height: 30px;
+    top: 4.5rem;
+  }
+  .email {
+    font-size: 1.3rem;
+    width: 30vw;
+  }
+  .title {
+    font-size: 1.3rem;
+    width: 30vw;
+  }
+  .content {
+    font-size: 1.3rem;
+  }
+  .check {
+    width: 35px;
+    height: 35px;
+  }
+}
 @media (max-width: 850px) {
   .Top-tag-group {
     display: none;
@@ -1542,7 +1662,465 @@
   .burger {
     display: block;
   }
+  .App-opened .about-sentence-group {
+    top: 25%;
+  }
+  .App-opened .about-fold {
+    top: 23%;
+    position: absolute;
+  }
+  .App-opened .holder-contact {
+    top: 30%;
+  }
+  .App-opened .contact-fold {
+    top: 28%;
+    position: absolute;
+  }
+}
+@media (max-width: 750px) {
+  .holder-contact {
+    top: 16%;
+    left: 14%;
+    width: 64%;
+  }
+  .name-contact {
+    font-size: 2rem;
+  }
+  .contact-fold {
+    width: 35px;
+    height: 35px;
+    top: 7.8rem;
+  }
+  .email {
+    font-size: 1rem;
+    width: 23vw;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .content {
+    font-size: 1rem;
+    width: 58vw;
+  }
+  .check {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 650px) {
   .about-sentence-group {
+    width: 60vw;
+    left: 15%;
+  }
+  .about-fold {
+    width: 30px;
+    height: 30px;
+    left: 75%;
+    top: 3%;
+  }
+  .about-title {
+    font-size: 1rem;
+  }
+  .about-title-myname {
+    font-size: 1.5rem;
+  }
+  .me {
+    left: 16rem;
+    top: 12rem;
+    width: 40px;
+    height: 40px;
+  }
+  .hand {
+    right: 34px;
+    width: 17px;
+    height: 17px;
+  }
+  .about-subtitle {
+    font-size: 0.6rem;
+  }
+  .line {
+    height: 2px;
+  }
+  .about-title {
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+  .about-title-line1 {
+    font-size: 2rem;
+  }
+  .about-title-beyond {
+    font-size: 1.5rem;
+    min-width: 10rem;
+  }
+  .about-title-line3 {
+    font-size: 2rem;
+  }
+  .about-title2-beyond {
+    font-size: 0.7rem;
+    margin-bottom: 5rem;
+  }
+  .about-beyond-holder {
+    margin-bottom: 10rem;
+  }
+  .about-beyond-subtitleNumber {
+    font-size: 1rem;
+  }
+  .about-progressBar {
+    height: 10px;
+  }
+  .about-subtitle-beyond {
+    font-size: 1.3rem;
+  }
+  .about-content-beyond {
+    font-size: 0.8rem;
+  }
+  .about-title-line2 {
+    font-size: 1.5rem;
+    min-width: 9rem;
+  }
+  .about-title-techstacks {
+    font-size: 1.4rem;
+  }
+  .holder-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .title-icon {
+    font-size: 0.5rem;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 7rem;
+  }
+  .holder-frontend-icons {
+    gap: 15px;
+    width: 150px;
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .holder-backend-icons {
+    gap: 15px;
+    width: 225px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 8rem;
+  }
+  .about-holder-techtools {
+    margin-top: 10rem;
+  }
+  .holder-techAndTools-icons {
+    gap: 15px;
+    width: 224px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .html {
+    width: 27px;
+    height: 27px;
+  }
+  .css {
+    width: 27px;
+    height: 27px;
+  }
+  .java {
+    width: 27px;
+    height: 27px;
+  }
+  .react {
+    width: 27px;
+    height: 27px;
+  }
+  .node {
+    width: 27px;
+    height: 27px;
+  }
+  .express {
+    width: 27px;
+    height: 27px;
+  }
+  .mongodb {
+    width: 27px;
+    height: 27px;
+  }
+  .render {
+    width: 27px;
+    height: 27px;
+  }
+  .restapi {
+    width: 27px;
+    height: 27px;
+  }
+  .router {
+    width: 27px;
+    height: 27px;
+  }
+  .jwt {
+    width: 27px;
+    height: 27px;
+  }
+  .vs {
+    width: 27px;
+    height: 27px;
+  }
+  .git {
+    width: 27px;
+    height: 27px;
+  }
+  .github {
+    width: 27px;
+    height: 27px;
+  }
+  .netlify {
+    width: 27px;
+    height: 27px;
+  }
+  .bootstrap {
+    width: 27px;
+    height: 27px;
+  }
+  .about-container-experience {
+    margin-bottom: 3rem;
+  }
+  .about-line-experience {
+    width: 0.2rem;
+  }
+  .about-title-experience {
+    font-size: 1rem;
+  }
+  .about-date-experience {
+    font-size: 0.7rem;
+  }
+  .about-subtitle-experience {
+    font-size: 0.8rem;
+  }
+  .onair {
+    min-width: 40px;
+    height: 40px;
+  }
+  .onair-red {
+    min-width: 0.4rem;
+    min-height: 0.4rem;
+  }
+  .checked {
+    min-width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .close-opened {
+    margin-left: 85vw;
+  }
 
+
+  .about-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .me {
+    left: 14rem;
+  }
+}
+@media (max-width: 450px) {
+  .about-sentence-group {
+    padding: 1.5rem;
+  }
+  .about-sentence-group {
+    width: 79vw;
+    left: 3%;
+  }
+  .about-fold {
+    width: 30px;
+    height: 30px;
+    left: 75%;
+    top: 3%;
+  }
+  .about-title {
+    font-size: 1rem;
+  }
+  .about-title-myname {
+    font-size: 1.5rem;
+  }
+  .me {
+    left: 16rem;
+    top: 12rem;
+    width: 40px;
+    height: 40px;
+  }
+  .hand {
+    right: 34px;
+    width: 17px;
+    height: 17px;
+  }
+  .about-subtitle {
+    font-size: 0.6rem;
+  }
+  .line {
+    height: 2px;
+  }
+  .about-title {
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+  .about-title-line1 {
+    font-size: 2rem;
+  }
+  .about-title-beyond {
+    font-size: 1.5rem;
+    min-width: 10rem;
+  }
+  .about-title-line3 {
+    font-size: 2rem;
+  }
+  .about-title2-beyond {
+    font-size: 0.7rem;
+    margin-bottom: 5rem;
+  }
+  .about-beyond-holder {
+    margin-bottom: 10rem;
+  }
+  .about-beyond-subtitleNumber {
+    font-size: 1rem;
+  }
+  .about-progressBar {
+    height: 10px;
+  }
+  .about-subtitle-beyond {
+    font-size: 1.3rem;
+  }
+  .about-content-beyond {
+    font-size: 0.8rem;
+  }
+  .about-title-line2 {
+    font-size: 1.5rem;
+    min-width: 9rem;
+  }
+  .about-title-techstacks {
+    font-size: 1.4rem;
+  }
+  .holder-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .title-icon {
+    font-size: 0.5rem;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 7rem;
+  }
+  .holder-frontend-icons {
+    gap: 15px;
+    width: 150px;
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .holder-backend-icons {
+    gap: 15px;
+    width: 225px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .about-holder-techstacks {
+    margin-bottom: 8rem;
+  }
+  .about-holder-techtools {
+    margin-top: 10rem;
+  }
+  .holder-techAndTools-icons {
+    gap: 15px;
+    width: 224px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+  }
+  .html {
+    width: 27px;
+    height: 27px;
+  }
+  .css {
+    width: 27px;
+    height: 27px;
+  }
+  .java {
+    width: 27px;
+    height: 27px;
+  }
+  .react {
+    width: 27px;
+    height: 27px;
+  }
+  .node {
+    width: 27px;
+    height: 27px;
+  }
+  .express {
+    width: 27px;
+    height: 27px;
+  }
+  .mongodb {
+    width: 27px;
+    height: 27px;
+  }
+  .render {
+    width: 27px;
+    height: 27px;
+  }
+  .restapi {
+    width: 27px;
+    height: 27px;
+  }
+  .router {
+    width: 27px;
+    height: 27px;
+  }
+  .jwt {
+    width: 27px;
+    height: 27px;
+  }
+  .vs {
+    width: 27px;
+    height: 27px;
+  }
+  .git {
+    width: 27px;
+    height: 27px;
+  }
+  .github {
+    width: 27px;
+    height: 27px;
+  }
+  .netlify {
+    width: 27px;
+    height: 27px;
+  }
+  .bootstrap {
+    width: 27px;
+    height: 27px;
+  }
+  .about-container-experience {
+    margin-bottom: 3rem;
+  }
+  .about-line-experience {
+    width: 0.2rem;
+  }
+  .about-title-experience {
+    font-size: 1rem;
+  }
+  .about-date-experience {
+    font-size: 0.7rem;
+  }
+  .about-subtitle-experience {
+    font-size: 0.8rem;
+  }
+  .onair {
+    min-width: 40px;
+    height: 40px;
+  }
+  .onair-red {
+    min-width: 0.4rem;
+    min-height: 0.4rem;
+  }
+  .checked {
+    min-width: 40px;
+    height: 40px;
   }
 }
