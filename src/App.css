@@ -1362,7 +1362,7 @@
     right: 50%;
   }
   .liveAndGit-button {
-    top: 
+    
   }
   .about-sentence-group {
     width: 60vw;
@@ -1731,10 +1731,10 @@
     max-width: 26rem;
   }
   .holder-project-skills-project3 {
-    max-width: 23rem;
+    max-width: 18.5rem;
   }
   .holder-project-skills {
-    max-width: 17rem;
+    max-width: 14rem;
   }
   .slides-wrapper {
     width: 40rem;
@@ -1838,7 +1838,13 @@
   }
 
   
-
+  .App-opened .holder-projects {
+    top: 45%;
+  }
+  .App-opened .project-fold {
+    position: absolute;
+    top: 25rem;
+  }
   .holder-picture-project {
     width: 100%;
     height: 18rem;
@@ -1868,7 +1874,7 @@
     max-width: 17rem;
   }
   .slides-wrapper {
-    width: 40rem;
+    width: 85%;
   }
   .slide {
     min-width: 100%;
@@ -2137,6 +2143,142 @@
   .me {
     left: 14rem;
   }
+
+
+
+  .holder-picture-project {
+    width: 100%;
+    height: 13rem;
+
+  }
+  .picture-project1 {
+    background-size: contain;
+  }
+  .project-fold {
+    left: 78%;
+    top: 16rem;
+    width: 40px;
+    height: 40px;
+  }
+  .holder-projects {
+    width: 80%;
+    left: 10%;
+    top: 30%;
+  }
+  .flex-project-skills-project1 {
+    gap: 0.3rem;
+  }
+  .holder-project-skills-project1 {
+    max-width: 23rem;
+  }
+  .holder-project-skills-project2 {
+    max-width: 21rem;
+    gap: 8px;
+  }
+  .holder-project-skills-project3 {
+    max-width: 14rem;
+    gap: 8px;
+  }
+  .holder-project-skills {
+    max-width: 11rem;
+    gap: 8px;
+  }
+  .slides-wrapper {
+    width: 85%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .title-project {
+    font-size: 1.3rem;
+  }
+  .text-project {
+    font-size: 0.6rem;
+    max-width: 22rem;
+    padding-bottom: 0rem;
+  }
+  .css-skill {
+    font-size: 0.5rem;
+    padding: 4px 8px;
+  }
+  .button-next {
+    width: 48px;
+    height: 48px;
+  }
+  .button-previous {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 550px) {
+  .holder-picture-project {
+    width: 100%;
+    height: 12rem;
+  }
+  .picture-project1 {
+    background-size: contain;
+  }
+  .project-fold {
+    left: 75%;
+    top: 16rem;
+    width: 30px;
+    height: 30px;
+  }
+  .holder-projects {
+    width: 80%;
+    left: 10%;
+    top: 30%;
+    height: 37%;
+
+  }
+  .flex-project-skills-project1 {
+    gap: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+  .rightsection-project1 {
+    margin-bottom: 0rem;
+}
+  .holder-project-skills-project1 {
+    max-width: 18rem;
+  }
+  .holder-project-skills-project2 {
+    max-width: 17rem;
+    gap: 3px;
+  }
+  .holder-project-skills-project3 {
+    max-width: 13rem;
+    gap: 8px;
+  }
+  .holder-project-skills {
+    max-width: 10rem;
+    gap: 8px;
+  }
+  .slides-wrapper {
+    width: 85%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .title-project {
+    font-size: 1rem;
+  }
+  .text-project {
+    font-size: 0.5rem;
+    max-width: 17rem;
+    padding-bottom: 0rem;
+  }
+  .css-skill {
+    font-size: 0.4rem;
+    padding: 4px 8px;
+  }
+  .button-next {
+    width: 30px;
+    height: 30px;
+  }
+  .button-previous {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media (max-width: 450px) {
   .about-sentence-group {
@@ -2339,5 +2481,75 @@
   .checked {
     min-width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .holder-picture-project {
+    width: 100%;
+    height: 13rem;
+  }
+  .picture-project1 {
+    background-size: contain;
+  }
+  .project-fold {
+    left: 75%;
+    top: 16rem;
+    width: 30px;
+    height: 30px;
+  }
+  .holder-projects {
+    width: 80%;
+    left: 10%;
+    top: 30%;
+    height: 37%;
+
+  }
+  .flex-project-skills-project1 {
+    gap: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+  .rightsection-project1 {
+    margin-bottom: 0rem;
+}
+  .holder-project-skills-project1 {
+    max-width: 18rem;
+  }
+  .holder-project-skills-project2 {
+    max-width: 13.5rem;
+    gap: 3px;
+  }
+  .holder-project-skills-project3 {
+    max-width: 10.5rem;
+    gap: 8px;
+  }
+  .holder-project-skills {
+    max-width: 8rem;
+    gap: 8px;
+  }
+  .slides-wrapper {
+    width: 85%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .title-project {
+    font-size: 1rem;
+  }
+  .text-project {
+    font-size: 0.5rem;
+    max-width: 17rem;
+    padding-bottom: 0rem;
+  }
+  .css-skill {
+    font-size: 0.4rem;
+    padding: 2px 4px;
+  }
+  .button-next {
+    width: 30px;
+    height: 30px;
+  }
+  .button-previous {
+    width: 30px;
+    height: 30px;
   }
 }
