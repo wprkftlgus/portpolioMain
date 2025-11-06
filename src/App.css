@@ -815,12 +815,14 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: 40rem;
+  align-items: center;
 }
 .flex-project-skills-project1 {
   display: flex;
   margin: 0 auto;
   gap: 1rem;
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 .holder-project-skills-project2 {
   display: flex;
@@ -828,6 +830,7 @@
   max-width: 37rem;
   height: 2rem;
   gap: 20px;
+  align-items: center;
 }
 .holder-project-skills-project3 {
   display: flex;
@@ -835,6 +838,7 @@
   max-width: 25rem;
   height: 2rem;
   gap: 20px;
+  align-items: center;
 }
 .holder-project-skills {
   display: flex;
@@ -842,6 +846,7 @@
   max-width: 20rem;
   height: 2rem;
   gap: 20px;
+  align-items: center;
 }
 .holder-contact {
   top: 10%;
@@ -1317,6 +1322,9 @@
   }
 }
 @media (max-width: 1560px) {
+  .live-button {
+    right: 30%;
+  }
   .project-fold {
     left: 63rem;
   }
@@ -1344,6 +1352,18 @@
   }
 }
 @media (max-width: 1300px) {
+  .live-button {
+    right: 50%;
+  }
+  .git-button {
+    right: 50%;
+  }
+  .holder-git-button {
+    right: 50%;
+  }
+  .liveAndGit-button {
+    top: 
+  }
   .about-sentence-group {
     width: 60vw;
     left: 15%;
@@ -1577,10 +1597,40 @@
     top: 100%;
   }
 
+
   .holder-picture-project {
-    width: 40.3rem;
-    height: 20rem;
+    width: 42.8rem;
+    height: 21rem;
+    margin: 0 auto;
   }
+  .project-fold {
+    left: 54rem;
+    top: 8rem;
+  }
+  .holder-projects {
+    width: 52rem;
+    top: 18%;
+    left: 13%;
+  }
+  .slides-wrapper {
+    width: 44rem;
+  }
+  .slide {
+    min-width: 43.7rem;
+  }
+  .text-project {
+    font-size: 1rem;
+    max-width: 40rem;
+  }
+  .button-next {
+    width: 67px;
+    height: 67px;
+  }
+  .button-previous {
+    width: 67px;
+    height: 67px;
+  }
+
 
   .name-contact {
     font-size: 2.5rem;
@@ -1605,15 +1655,125 @@
     height: 50px;
   }
 }
+@media (max-width: 1130px) {
+  .holder-picture-project {
+    width: 42.8rem;
+    height: 21rem;
+    margin: 0 auto;
+  }
+  .project-fold {
+    left: 48rem;
+    top: 8rem;
+  }
+  .holder-projects {
+    width: 52rem;
+    top: 18%;
+    left: 7%;
+  }
+  .holder-project-skills-project2 {
+    max-width: 34rem;
+  }
+  .holder-project-skills-project3 {
+    max-width: 23rem;
+  }
+  .holder-project-skills {
+    max-width: 17rem;
+  }
+  .slides-wrapper {
+    width: 44rem;
+  }
+  .slide {
+    min-width: 43.7rem;
+  }
+  .title-project {
+    font-size: 2rem;
+  }
+  .text-project {
+    font-size: 0.8rem;
+    max-width: 40rem;
+  }
+  .css-skill {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .button-next {
+    width: 67px;
+    height: 67px;
+  }
+  .button-previous {
+    width: 67px;
+    height: 67px;
+  }
+}
 @media (max-width: 1100px) {
   .about-beyond-flex {
     flex-direction: column;
     margin: 0 auto;
   }
 }
+@media (max-width: 1050px) {
+  .holder-picture-project {
+    width: 36.8rem;
+    height: 18rem;
+  }
+  .project-fold {
+    left: 46rem;
+    top: 16rem;
+    width: 40px;
+    height: 40px;
+  }
+  .holder-projects {
+    width: 42.2rem;
+    left: 15%;
+    top: 30%;
+  }
+  .holder-project-skills-project2 {
+    max-width: 26rem;
+  }
+  .holder-project-skills-project3 {
+    max-width: 23rem;
+  }
+  .holder-project-skills {
+    max-width: 17rem;
+  }
+  .slides-wrapper {
+    width: 40rem;
+  }
+  .slide {
+    min-width: 36.7rem;
+  }
+  .title-project {
+    font-size: 1.6rem;
+  }
+  .text-project {
+    font-size: 0.7rem;
+    max-width: 36rem;
+    padding-bottom: 0rem;
+  }
+  .css-skill {
+    font-size: 0.5rem;
+    padding: 4px 8px;
+  }
+  .button-next {
+    width: 48px;
+    height: 48px;
+  }
+  .button-previous {
+    width: 48px;
+    height: 48px;
+  }
+}
 @media (max-width: 1000px) {
   .about-subtitle-experience {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 965px) {
+  .holder-projects {
+    left: 10%;
+  }
+  .project-fold {
+    left: 42rem;
   }
 }
 @media (max-width: 900px) {
@@ -1675,6 +1835,63 @@
   .App-opened .contact-fold {
     top: 28%;
     position: absolute;
+  }
+
+  
+
+  .holder-picture-project {
+    width: 100%;
+    height: 18rem;
+
+  }
+  .picture-project1 {
+    background-size: contain;
+  }
+  .project-fold {
+    left: 78%;
+    top: 16rem;
+    width: 40px;
+    height: 40px;
+  }
+  .holder-projects {
+    width: 80%;
+    left: 10%;
+    top: 30%;
+  }
+  .holder-project-skills-project2 {
+    max-width: 26rem;
+  }
+  .holder-project-skills-project3 {
+    max-width: 23rem;
+  }
+  .holder-project-skills {
+    max-width: 17rem;
+  }
+  .slides-wrapper {
+    width: 40rem;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .title-project {
+    font-size: 1.6rem;
+  }
+  .text-project {
+    font-size: 0.7rem;
+    max-width: 36rem;
+    padding-bottom: 0rem;
+  }
+  .css-skill {
+    font-size: 0.5rem;
+    padding: 4px 8px;
+  }
+  .button-next {
+    width: 48px;
+    height: 48px;
+  }
+  .button-previous {
+    width: 48px;
+    height: 48px;
   }
 }
 @media (max-width: 750px) {
