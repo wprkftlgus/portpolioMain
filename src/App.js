@@ -390,9 +390,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
             <div className='picture-project1'>{hover && (
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>
-              <div className='live-button'>Live</div>
+              <div className='live-button'>Live</div></a>
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'><div className='holder-git-button'><div className='git-button'></div></div></a>
-              </a>
               </div>)}</div>
           </div>
           
@@ -425,9 +424,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
             <div className='picture-project2'>{hover && (
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://recipeapibysihyeon.netlify.app/'>
-              <div className='live-button'>Live</div>
+              <div className='live-button'>Live</div></a>
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/RecipeAPI'><div className='holder-git-button'><div className='git-button'></div></div></a>
-              </a>
               </div>)}</div>
           </div>
           <div className='title-project'>MyRecipe</div>
@@ -450,9 +448,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
             <div className='picture-project3'>{hover && (
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://spacebysihyeon.netlify.app/'>
-              <div className='live-button'>Live</div>
+              <div className='live-button'>Live</div></a>
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/portpolioMain'><div className='holder-git-button'><div className='git-button'></div></div></a>
-              </a>
               </div>)}</div>
           </div>
           <div className='title-project'>The Space</div>
@@ -474,9 +471,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
             <div className='picture-project4'>{hover && (
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://netflisclonebysihyeon.netlify.app/'>
-              <div className='live-button'>Live</div>
+              <div className='live-button'>Live</div></a>
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/Netflix'><div className='holder-git-button'><div className='git-button'></div></div></a>
-              </a>
               </div>)}</div>
           </div>
           <div className='title-project'>SeanFlix</div>
@@ -496,9 +492,8 @@ Although my learning pace was irregular due to military service (1.5 years) and 
             <div className='picture-project5'>{hover && (
               <div className='liveAndGit-button'>
               <a id='live' target='_blank' href='https://sean-calculator.netlify.app/'>
-              <div className='live-button'>Live</div>
+              <div className='live-button'>Live</div></a>
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/Calculator'><div className='holder-git-button'><div className='git-button'></div></div></a>
-              </a>
               </div>)}</div>
           </div>
           <div className='title-project'>Calculator</div>
