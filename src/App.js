@@ -7,6 +7,7 @@ import { motion  } from 'framer-motion';
 import * as THREE from 'three';
 import { div } from 'framer-motion/client';
 import { Html } from '@react-three/drei';
+import { useForm, ValidationError } from '@formspree/react';
 
 function Scene({focus, onLoad}) {
   const { camera } = useThree();
@@ -134,6 +135,54 @@ function Orbit({ speed, radius, children }) {
         {children}
       </group>
     </group>
+  );
+}
+
+
+function ContactForm({contactfold}) {
+  const [email, setEmail] = useState("");
+  const [content, setContent] = useState("");
+  const [state, handleSubmit] = useForm("xwpaevyp");
+
+  
+
+  const onSubmit = (e) => {
+    e.preventDefault(); 
+    if (!email) {
+      alert("please put email");
+      return;
+    }
+    if (!content) {
+      alert("please put content");
+      return;
+    }
+    
+    if (state.succeeded) {
+    alert("Thank you for joining!");
+  } handleSubmit(e); 
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+    <motion.div className='contact-sentence' initial={{opacity: 0}}
+        animate={{opacity:10}} transition={{duration: 0}}>
+        <div className={contactfold ? 'holder-contact' : 'about-hide'}>
+          
+          <div className='name-contact'>Contact</div>
+          <input  id="email"
+        type="email" value={email}
+            onChange={(e) => setEmail(e.target.value)}
+        name="email" placeholder='Your Email' className='email'></input>
+          <textarea id="message" name="message" placeholder='Content' 
+          value={content}
+            onChange={(e) => setContent(e.target.value)}
+          className='content'></textarea>
+          <button className='holder-check'>
+            <div className='check'></div>
+          </button>
+        </div>
+        </motion.div>
+    </form>
   );
 }
 
@@ -518,18 +567,7 @@ Although my learning pace was irregular due to military service (1.5 years) and 
 
       {focus === 'moon' && (<div onClick={() => setContactfold(prev =>!prev)} className='contact-fold'></div>)}
       {focus === 'moon' && (
-        <motion.div className='contact-sentence' initial={{opacity: 0}}
-        animate={{opacity:10}} transition={{duration: 0}}>
-        <div className={contactfold ? 'holder-contact' : 'about-hide'}>
-          <div className='name-contact'>Contact</div>
-          <input placeholder='Your Email' className='email'></input>
-          <input placeholder='Title' className='title'></input>
-          <textarea placeholder='Content' className='content'></textarea>
-          <div className='holder-check'>
-            <div className='check'></div>
-          </div>
-        </div>
-        </motion.div>
+        <ContactForm  contactfold={contactfold}/>
       )}
       {isLoaded && (<div onClick={() => {setBurger((prev) => !prev)}} className={!burger ? "burger" : "burger-opened"}></div>)}
       <div className={!burger ? "Top-tag-group" : "Top-tag-group-opened"}>

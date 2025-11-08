@@ -899,11 +899,18 @@
   resize: none;
 }
 .holder-check {
-  text-align: right;
+  background: none;       
+  border: none;           
+  padding: 0;             
+  cursor: pointer;        
+  position: relative;
+  left: 85%;
+  justify-content: center;
+  align-items: center;
 }
 .check {
   cursor: pointer;
-  display: inline-block;
+  
   background-image: url('../public/check.png');
   background-repeat: no-repeat;
   background-size: cover;
