@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# 🖥 MERN Full-Stack Project: Posts & Comments Dashboard
+<img width="1657" height="948" alt="space" src="https://github.com/user-attachments/assets/b1db71a9-aa90-4993-99e8-d4ac3af72529" />
+<img width="1908" height="947" alt="space1" src="https://github.com/user-attachments/assets/9aabfc9e-19fa-4b26-9650-d977fe2ad05b" />
+<img width="1896" height="943" alt="space2" src="https://github.com/user-attachments/assets/c1cd08f8-ba3d-4705-b32b-b459dcef4667" />
+<img width="1895" height="938" alt="space3" src="https://github.com/user-attachments/assets/79fc44a1-df07-46ea-8f75-97d06cf7188f" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **🌐 Live Website**
+https://spacebysihyeon.netlify.app/
 
-## Available Scripts
+# 🪐 Overview
 
-In the project directory, you can run:
+The Space is a 3D portfolio website built using React.js and Three.js, where users can explore my developer journey across planets.
+Each planet represents a different section — About, Projects, and Contact — and the camera smoothly zooms in and out of each planet, providing an interactive storytelling experience.
 
-### `npm start`
+This project combines creative 3D visualization and clean front-end structure to showcase my technical skills and design philosophy.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# ⚙️ Tech Stack
+### Front-End : React.js, React Hooks (useState, useEffect), React Router
+### 3D & Animation : Three.js, @react-three/fiber, @react-three/drei, Framer Motion, Postprocessing (Bloom effect)
+### Styling : HTML, CSS
+### Build & Deploy : Netlify
+  
+# 🌍 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Interactive Solar System
 
-### `npm test`
+Built entirely in Three.js using realistic 3D planet models.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dynamic camera transitions when navigating between planets (About, Project, Contact).
 
-### `npm run build`
+Smooth rotation and responsive mouse movement using useFrame() and useThree().
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧭 Section Navigation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Each section is tied to a planet:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🌎 Earth → About Me & Experience
 
-### `npm run eject`
+🔴 Mars → Projects Showcase
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🌕 Moon → Contact Section
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clicking navigation triggers a camera zoom animation to the target planet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧱 Component Architecture
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Reusable Orbit and MoonOrbit components for rotating planetary motion.
 
-## Learn More
+Intersection Observer animations to smoothly reveal content while scrolling.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+motion.div (Framer Motion) for fade-in and smooth transitions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 About Section
 
-### Code Splitting
+Introduction & developer philosophy (Beyond Code).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Technical stacks categorized as Front-End, Back-End, and Tech & Tools.
 
-### Analyzing the Bundle Size
+Timeline of education, self-learning, military service, and Airbnb experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Projects Section
 
-### Making a Progressive Web App
+Carousel-based UI displaying key personal projects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Hover effects reveal live site and GitHub links.
 
-### Advanced Configuration
+Each slide includes short descriptions and technology badges.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+# 🛠 How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**1. Clone the repository** <br>
+git clone https://github.com/wprkftlgus/portpolioMain.git
 
-### `npm run build` fails to minify
+**2. Install dependencies**
+<br>
+npm install <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+**3. Install dependencies**<br>
+npm start
+
+
+
+
+
+
+
+
