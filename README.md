@@ -1,8 +1,5 @@
 # 🖥 MERN Full-Stack Project: Posts & Comments Dashboard
 <img width="1657" height="948" alt="space" src="https://github.com/user-attachments/assets/b1db71a9-aa90-4993-99e8-d4ac3af72529" />
-<img width="1908" height="947" alt="space1" src="https://github.com/user-attachments/assets/9aabfc9e-19fa-4b26-9650-d977fe2ad05b" />
-<img width="1896" height="943" alt="space2" src="https://github.com/user-attachments/assets/c1cd08f8-ba3d-4705-b32b-b459dcef4667" />
-<img width="1895" height="938" alt="space3" src="https://github.com/user-attachments/assets/79fc44a1-df07-46ea-8f75-97d06cf7188f" />
 
 # **🌐 Live Website**
 https://spacebysihyeon.netlify.app/
