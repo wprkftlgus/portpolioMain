@@ -2,6 +2,9 @@
 
 ### “A journey through planets, inspired by Interstellar.”
 <img width="1657" height="948" alt="space" src="https://github.com/user-attachments/assets/b1db71a9-aa90-4993-99e8-d4ac3af72529" />
+<img width="1908" height="947" alt="space1" src="https://github.com/user-attachments/assets/04662b5a-8fb4-401d-8525-8c58340a6fca" />
+<img width="1896" height="943" alt="space2" src="https://github.com/user-attachments/assets/f51fd946-42ad-4d2a-a05f-1ba42a175a4c" />
+
 
 # **🌐 Live Website**
 https://spacebysihyeon.netlify.app/
