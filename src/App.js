@@ -195,6 +195,7 @@ function App() {
   const slides = [0, 1, 2, 3, 4];
   const [index, setIndex] = useState(0);
   const [hover, setHover] = useState(false);
+  const [livehover, setLivehover] = useState(false);
   const [burger, setBurger] = useState(false);
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) %slides.length);
@@ -437,9 +438,16 @@ Although my learning pace was irregular due to military service (1.5 years) and 
           <div className='slide'>
           <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='holder-picture-project'>
             <div className='picture-project1'>{hover && (
-              <div className='liveAndGit-button'>
+              <div className='frontBackAndGit-button'>
+              
+                <div className='holder-backendAndFrontend'>
+                <a id='live' target='_blank' href='https://mainresisterlogin.onrender.com'>
+              <div className='backend-button'>#Back-end</div></a>
               <a id='live' target='_blank' href='https://mainresgisterlogin.netlify.app/'>
-              <div className='live-button'>Live</div></a>
+              <div className='frontend-button'>#Front-end</div></a>
+              </div>
+              
+              
               <a id='git' target='_blank' href='https://github.com/wprkftlgus/mainresisterlogin'><div className='holder-git-button'><div className='git-button'></div></div></a>
               </div>)}</div>
           </div>
